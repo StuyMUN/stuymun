@@ -6,3 +6,5 @@ conference descriptions/links to forms
 (optiona) history??
 contact/facebook/stuyactivities
 use react to make it look nice
+
+USE NEXT.JS
