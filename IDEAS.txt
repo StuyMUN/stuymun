@@ -1,0 +1,8 @@
+INFO FOR MINIMUNC/STUYMUNC
+meet the team
+awards/conferences that already happened
+conference descriptions/links to forms
+  make a program for automatically making components
+(optiona) history??
+contact/facebook/stuyactivities
+use react to make it look nice
