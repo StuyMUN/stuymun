@@ -4,7 +4,7 @@ import { getSiteData } from '../lib/data';
 
 import styles from '../styles/OurTeam.module.css';
 
-export default function OurTeam({team}) {
+export default function OurTeamPage({team}) {
 
     let memberLists = [], i = 0;
     for (let rank in team) {
