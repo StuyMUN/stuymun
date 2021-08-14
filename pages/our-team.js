@@ -17,7 +17,7 @@ export default function OurTeamPage({team}) {
     }
 
     return (
-        <Layout>
+        <Layout title={'Team Page'}>
             <div className={styles.members}>
                 <h2>Our team!</h2>
                 {memberLists}
