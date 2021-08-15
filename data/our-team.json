@@ -1,13 +1,20 @@
-{
-    "secretariat": [
-        "the president",
-        "president the",
-        "hell yea"
-    ],
+[
+    { 
+        "position": "secretariat",
+        "people": [
+            "the president",
+            "president the",
+            "hell yea"
+        ]
+    },
 
-    "members": [
-        "oh yeah",
-        "kool aid",
-        "stuy mun"
-    ]
-}
+    { 
+        "position": "member",
+        "people": [
+            "the president",
+            "president the",
+            "hell yea"
+        ]
+    }
+
+]
