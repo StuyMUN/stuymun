@@ -1,6 +1,5 @@
 import Layout from '../components/Layout';
 import { getSiteData } from '../lib/data';
-import styles from '../styles/About.module.css';
 
 function createMarkup(about) {
     return {__html: about}
