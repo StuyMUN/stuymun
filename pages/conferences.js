@@ -10,24 +10,22 @@ class ConferencesPage extends React.Component {
         super(props);
     }
 
+    getConferenceLink(name) {
+        return <Link href={`/conference/${name}`}>{name}</Link>
+    }
+
     render() {
         let conferences = this.props.conferences;
-        
-        let conferenceList = [], i = 0;
-        for (let conference in conferences) {
-            conferenceList.push(
-                <li key={i++}>
-                    <Link href={`/conference/${conference}`}>
-                        {conference}
-                    </Link>
-                </li>
-            );
-        }
 
         return (
             <Layout title={'Conferences'}>
                 <div>Conferences: </div>
-                <ul>{conferenceList}</ul>
+                
+                <ul>
+                    {conferences.map((name, i) => 
+                        <li key={i}>{this.getConferenceLink(name)}</li>
+                    )}
+                </ul>
             </Layout>
         );
     }
@@ -37,6 +35,8 @@ class ConferencesPage extends React.Component {
 export default ConferencesPage;
 
 export async function getStaticProps() {
-    const site = await getSiteData();
-    return { props: { conferences: site['conferences'] }};
+    let site = await getSiteData(),
+        conferences = Object.keys(site['conferences']);
+
+    return { props: { conferences }};
 }

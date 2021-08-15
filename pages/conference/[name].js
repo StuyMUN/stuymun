@@ -1,38 +1,28 @@
 
 import Layout from "../../components/Layout";
+import NamedObject from "../../components/NamedObject";
 import { getSiteData } from "../../lib/data";
 
 export default function ConferencePage({ name, details, committees }) {
-    let detailsList = [], i = 0;
-    for (let detailType in details) {
-        detailsList.push(
-            <li key={i++}> 
-                {detailType}: {details[detailType]}
-            </li>
-        );
-    }
-
-    let allCommittees = [];
-    for (let committeeInfo of committees) {
-        let j = 0;
-        for (let info in committeeInfo) {
-            allCommittees.push(
-                <li key={j++}>
-                    {info}: {committeeInfo[info]}
-                </li>
-            );
-        }
-    }
 
     return (
         <Layout title={name}>
             <div><h1>{name}</h1></div>
+            
+            <NamedObject 
+                title={'Details'} 
+                object={details}
+            />
+            
             <ul>
-                {detailsList}
+                {committees.map(({name, description}, i) => 
+                    <li key={i}>
+                        <h3>{name}</h3>
+                        <div>{description}</div>
+                    </li>
+                )}
             </ul>
-            <ul>
-                {allCommittees}
-            </ul>
+        
         </Layout>
     );
 }
