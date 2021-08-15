@@ -8,7 +8,6 @@ function createMarkup(about) {
 export default function AboutPage({about}) {
     return (
         <Layout title={'About Page'}>
-            <h2>About Us!</h2>
             <div dangerouslySetInnerHTML={createMarkup(about)} />
         </ Layout>
     );
@@ -16,5 +15,5 @@ export default function AboutPage({about}) {
 
 export async function getStaticProps() {
     let site = await getSiteData();
-    return { props: { about: site['about'] } };
+    return { props: { about: site['about'].html } };
 }
