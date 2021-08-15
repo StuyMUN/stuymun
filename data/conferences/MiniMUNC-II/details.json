@@ -1,0 +1,10 @@
+{
+    "host": "MiniMUNC",
+    "date": "tomorrow",
+    "location": "the street",
+
+    "rules": [
+        "no swearing",
+        "clothes"
+    ]
+}
