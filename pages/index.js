@@ -7,6 +7,7 @@ export default function HomePage() {
             <div>Welcome to StuyMun</div>
             <div>Pages: </div>
             <ul>
+                <li><Link href={'/about'}><a>About Us!</a></Link></li>
                 <li><Link href={'/our-team'}><a>Our Team!</a></Link></li>
             </ul>
         </ Layout>
