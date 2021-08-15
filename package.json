@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
+    "js-yaml": "^4.1.0",
     "marked": "^2.1.3",
     "next": "11.0.1",
     "react": "17.0.2",
