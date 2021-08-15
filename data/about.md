@@ -4,5 +4,6 @@ The Stuyvesant Model United Nations team, commonly called StuyMUN, is made up of
 Every April, the team also hosts its own conference, the Stuyvesant Model United Nations Conference, which attracts delegates from around the New York area.
 
 ## Conclusion
+Sussus Amogus  
 
 ![sus](img/sus.jpg)
