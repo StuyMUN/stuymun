@@ -16,5 +16,5 @@ export default function AboutPage({about}) {
 
 export async function getStaticProps() {
     let site = await getSiteData();
-    return { props: { about: site['about'] } };
+    return { props: { about: site['about'].html } };
 }
