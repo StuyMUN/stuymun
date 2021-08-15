@@ -3,7 +3,13 @@ import Layout from "../../components/Layout";
 import NamedObject from "../../components/NamedObject";
 import { getSiteData } from "../../lib/data";
 
+import Link from 'next/link';
+
 export default function ConferencePage({ name, details, committees }) {
+
+    function getCommitteeLink(conferenceName, committee) {
+        return <Link href={`/conference/${conferenceName}/${committee}`}><a>{committee}</a></Link>
+    }
 
     return (
         <Layout title={name}>
@@ -15,10 +21,9 @@ export default function ConferencePage({ name, details, committees }) {
             />
             
             <ul>
-                {committees.map(({name, description}, i) => 
+                {committees.map((entry, i) => 
                     <li key={i}>
-                        <h3>{name}</h3>
-                        <div>{description}</div>
+                        {getCommitteeLink(name, entry.name)}
                     </li>
                 )}
             </ul>
@@ -41,16 +46,13 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    let paths = [];
     const site = await getSiteData();
-    console.log(site);
-    for (let conference in site['conferences']) {
-        paths.push({
-            params: {
-                name: conference
-            }
-        });
-    }
-
-    return { paths, fallback: false };
+    let cnfs = Object.keys(site['conferences']);
+    
+    return { 
+        paths: cnfs.map(cnf => {
+            return { params: {name: cnf} };
+        }), 
+        fallback: false 
+    };
 }
