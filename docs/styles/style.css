@@ -1,0 +1,84 @@
+:root {
+    --bg-logo: #44C5FF;
+    --bg-light-200: #E6F4F1;
+    --bg-light-400: #BFD6D9;
+
+    --ff-header: 'Ubuntu', sans-serif;
+    --ff-body: 'Oxygen', sans-serif;
+}
+.bg-logo {
+    background: var(--bg-logo);
+}
+.bg-light-200 {
+    background: var(--bg-light-200);
+}
+.bg-light-400 {
+    background: var(--bg-light-400);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    font-family: var(--ff-header);
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: center;
+    height: 100%;
+    width: min(100%, 70rem);
+    margin-inline: auto;
+    overflow: hidden;
+}
+    nav div {
+        float: right;
+        padding-top: 1.7rem;
+        padding-inline: 1.4rem;
+    }
+        nav .nav-title {
+            font-weight: 900;
+            padding: 0;
+            float: left;
+        }
+            nav img {
+                width: 5rem;
+                max-width: 100%;
+            }
+h1,
+h2,
+h3 {
+    font-family: var(--ff-header);
+    font-weight: 900;
+    line-height: 1;
+}
+h2,
+h3,
+p {
+    margin-bottom: 1em;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: 0.03rem;
+}
+
+header {
+    padding: 3rem 0;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 70rem);
+}
+
+.text-center{ 
+    text-align: center;
+}
