@@ -1,6 +1,8 @@
 :root {
-    --bg-logo: #44C5FF;
-    --bg-light-100: #ecf3f2;
+    --bg-gradient: url(../assets/gradient.png);
+
+    --bg-logo: rgba(68, 197, 255, 0.4);
+    --bg-light-100: #ffffff;
     --bg-light-200: #E6F4F1;
     --bg-light-400: #BFD6D9;
 
@@ -9,6 +11,10 @@
 }
 .bg-logo {
     background: var(--bg-logo);
+    backdrop-filter: blur(40px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.0.5);
 }
 .bg-light-200 {
     background: var(--bg-light-200);
@@ -44,6 +50,7 @@ nav {
             float: left;
         }
             nav img {
+                padding-top: 0.5rem;
                 width: 5rem;
                 max-width: 100%;
             }
@@ -67,6 +74,13 @@ body {
     line-height: 1.5;
     letter-spacing: 0.03rem;
 }
+html {
+    background: var(--bg-gradient) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 header {
     padding: 3rem 0;
@@ -78,8 +92,21 @@ section {
 
 .container {
     margin-inline: auto;
-    width: min(90%, 70rem);
+    width: min(95%, 75rem);
+    padding: 2em;
+
+    backdrop-filter: blur(40px);
+    background: rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
 }
+    @media (min-width: 80rem) {
+        .container {
+            padding: 4em;
+        }
+    }
 
 .text-center{ 
     text-align: center;
