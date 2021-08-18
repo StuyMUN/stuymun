@@ -9,12 +9,16 @@ class CommitteePage extends React.Component {
     }
 
     render() {
-        const { name, description } = this.props;
+        const { name, chair, codirectors, description, bglink } = this.props;
 
         return (
             <Layout title={name}>
-                <h3>{name}</h3>
-                <p>{description}</p>
+                <h2>{name}</h2><br/>
+                Chair: <i>{chair}</i><br/>
+                Co-Directors: <i>{codirectors}</i><br/>
+                <p>{description}</p><br/>
+                <a href={bglink}>Background Guide</a><br/><br/>
+                <hr/>
             </Layout>
         );
     }

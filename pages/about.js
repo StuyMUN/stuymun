@@ -8,7 +8,6 @@ function createMarkup(about) {
 export default function AboutPage({about}) {
     return (
         <Layout title={'About Page'}>
-            <h2>About Us!</h2>
             <div dangerouslySetInnerHTML={createMarkup(about)} />
         </ Layout>
     );
