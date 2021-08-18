@@ -1,42 +1,38 @@
 import Layout from '../components/Layout.js'
 import React from "react";
-import { getSiteData } from '../lib/data.js';
+import { Conferences } from '../lib/util';
 
 import Link from 'next/link';
 
-class ConferencesPage extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
-    getConferenceLink(name) {
+export default function ConferencesPage({ stuy, other }) {
+    function getConferenceLink(name) {
         return <Link href={`/conference/${name}`}>{name}</Link>
     }
 
-    render() {
-        let conferences = this.props.conferences;
-
-        return (
-            <Layout title={'Conferences'}>
-                <div>Conferences: </div>
-                
-                <ul>
-                    {conferences.map((name, i) => 
-                        <li key={i}>{this.getConferenceLink(name)}</li>
-                    )}
-                </ul>
-            </Layout>
-        );
+    function getConferenceSection(conferences) {
+        return (<div style={{marginBlock: "15px"}}>
+            <ul>
+                {conferences.map((name, i) => 
+                    <li key={i}>{getConferenceLink(name)}</li>
+                )}
+            </ul>
+        </div>);
     }
 
+    return (
+        <Layout title={'Conferences'}>
+            <div>Conferences: </div>
+            {getConferenceSection(stuy)}
+            {getConferenceSection(other)}
+        </Layout>
+    );
 }
 
-export default ConferencesPage;
-
 export async function getStaticProps() {
-    let site = await getSiteData(),
-        conferences = Object.keys(site['conferences']);
-
-    return { props: { conferences }};
+    return { 
+        props: { 
+            stuy: Object.keys(await Conferences.getStuyConferences()),
+            other: Object.keys(await Conferences.getOtherConferences())
+        }
+    }; 
 }

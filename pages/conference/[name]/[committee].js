@@ -1,62 +1,67 @@
 import React from 'react';
+import Link from 'next/link';
 import Layout from '../../../components/Layout';
-import { getSiteData } from '../../../lib/data';
+import { Conferences } from '../../../lib/util';
 
-class CommitteePage extends React.Component {
-    
-    constructor(props) {
-        super(props);
+export default function CommitteePage({ committee, conference }) {
+
+    const { name, description, chair, codirector, bglink } = committee;
+
+
+    function hasBGLink(bglink) {
+        return bglink !== undefined && 
+            bglink.startsWith("http");
     }
 
-    render() {
-        const { name, chair, codirectors, description, bglink } = this.props;
-
-        return (
-            <Layout title={name}>
-                <h2>{name}</h2><br/>
-                Chair: <i>{chair}</i><br/>
-                Co-Directors: <i>{codirectors}</i><br/>
-                <p>{description}</p><br/>
-                <a href={bglink}>Background Guide</a><br/><br/>
-                <hr/>
-            </Layout>
-        );
+    function getBGLink(bglink) {
+        if (hasBGLink(bglink)) {
+            return <Link href={bglink}>Check out this Background Guide!</Link>
+        } else {
+            return <p>Background Guide coming soon!</p>
+        }
     }
+
+    return (
+        <Layout title={name}>
+            <h2>{name}</h2><br/>
+            <i>Chair: {chair}</i><br/>
+            <i>{codirector}</i><br/>
+            <p>{description}</p><br/>
+            {getBGLink(bglink)}<br/><br/>
+            <hr/>
+            <Link href={`/conference/${conference}`}>Go back to conference</Link>
+        </Layout>
+    );
 }
 
-export default CommitteePage;
-
 export async function getStaticProps({ params }) {
-    const site = await getSiteData();
-
-    const committees = site['conferences'][params.name].committees;
+    const committees = 
+        (await Conferences.getStuyConference(params.name)).committees;
 
     let props = {};
 
     for (let committee of committees) {
         if (committee.name == params.committee) {
-            props = committee;
+            props = { committee:committee, conference: params.name };
             break;
         }
     }
 
-    return { 
-        props
-    };
+    return { props };
 }
 
 export async function getStaticPaths() {
-    let site = await getSiteData(),
-        conferences = site['conferences'];
+    let conferences = 
+        await Conferences.getStuyConferences();
     
     let paths = [];
-    for (let conference in conferences) {
-        let committees = conferences[conference].committees;
+    for (let name in conferences) {
+        let committees = conferences[name].committees;
 
         for (let committee of committees) {
             paths.push({
                 params: { 
-                    name: conference, 
+                    name: name, 
                     committee: committee.name 
                 }
             });

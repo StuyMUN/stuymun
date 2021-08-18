@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import { getSiteData } from '../lib/data';
+import { Site } from '../lib/util';
 
 function createMarkup(about) {
     return {__html: about}
@@ -14,6 +14,6 @@ export default function AboutPage({about}) {
 }
 
 export async function getStaticProps() {
-    let site = await getSiteData();
-    return { props: { about: site['about'].html } };
+    let site = await Site.getData();
+    return { props: { about: site['about'].content } };
 }
