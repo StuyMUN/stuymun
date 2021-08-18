@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import NamedList from '../components/NamedList';
-import { getSiteData } from '../lib/data';
+import { Site } from '../lib/util';
 
 import styles from '../styles/OurTeam.module.css';
 
@@ -23,6 +23,6 @@ export default function OurTeamPage({ groups }) {
 }
 
 export async function getStaticProps() {
-    let site = await getSiteData();
+    let site = await Site.getData();
     return { props: { groups: site['our-team'] } };
 }
