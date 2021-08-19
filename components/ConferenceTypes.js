@@ -31,12 +31,8 @@ export function StuyConference({ name, conference }) {
         return <Link href={`/conference/${conferenceName}/${committee}`}><a>{committee}</a></Link>
     }
     
-    function createMarkup(html) {
-        return {__html: html}
-    }
-
     return (<div>
-            <div dangerouslySetInnerHTML={createMarkup(conference.details.content)} />
+            <div dangerouslySetInnerHTML={{__html: conference.details.content}} />
             
             <ul>
                 {conference.committees.map((entry, i) => 
