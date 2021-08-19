@@ -115,10 +115,11 @@ html {
   background-size: cover;
 }
 
-@media (max-width: 830px) {
+@media only screen and (max-width: 830px) {
   html {
-    background-image: url(../assets/UNv2-vert-min.png);
-    -webkit-background-image: url(../assets/UNv2-vert-min.png);
+    background-image: url(../assets/UNv2-vert-min.png) fixed;
+    -webkit-background-image: url(../assets/UNv2-vert-min.png) fixed;
+    background-size: cover;
   }
 }
 
