@@ -99,12 +99,8 @@ html {
 }
 @media (max-width: 830px) {
 	html {
-		background: url(../assets/UNv2-vert-min.png) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		-webkit-background: url(../assets/UNv2-vert-min.png) no-repeat center center fixed;
+		background-image: url(../assets/UNv2-vert-min.png);
+		-webkit-background-image: url(../assets/UNv2-vert-min.png);
 	}
 
 }
