@@ -117,8 +117,7 @@ html {
 
 @media (max-width: 830px) {
   html {
-    background: url(../assets/UNv2-vert.svg.png) no-repeat center center fixed;
-    background-size: cover;
+    background: url(../assets/UNv2-vert.svg.png);
   }
 }
 
