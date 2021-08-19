@@ -1,20 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../../../components/Layout';
-import { Conferences } from '../../../lib/util';
+import { Conferences, isHttpLink } from '../../../lib/util';
 
 export default function CommitteePage({ committee, conference }) {
 
     const { name, description, chair, codirector, bglink } = committee;
 
-
-    function hasBGLink(bglink) {
-        return bglink !== undefined && 
-            bglink.startsWith("http");
-    }
-
     function getBGLink(bglink) {
-        if (hasBGLink(bglink)) {
+        if (isHttpLink(bglink)) {
             return <Link href={bglink}>Check out this Background Guide!</Link>
         } else {
             return <p>Background Guide coming soon!</p>
@@ -23,12 +17,14 @@ export default function CommitteePage({ committee, conference }) {
 
     return (
         <Layout title={name}>
+            
             <h2>{name}</h2><br/>
             <i>Chair: {chair}</i><br/>
             <i>{codirector}</i><br/>
             <p>{description}</p><br/>
             {getBGLink(bglink)}<br/><br/>
             <hr/>
+
             <Link href={`/conference/${conference}`}>Go back to conference</Link>
         </Layout>
     );
