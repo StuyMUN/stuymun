@@ -98,11 +98,8 @@ html {
 	background-size: cover;
 }
 @media (max-width: 830px) {
-	@supports (-webkit-touch-callout: none) {
-		html {
-			background: url('../assets/UNv2-vert-min.png') center top no-repeat scroll;
-			background-size: auto 100vh;
-		}    
+	html {
+		background: #3F8FDE;
 	}
 }
 section {
