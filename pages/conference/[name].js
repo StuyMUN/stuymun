@@ -1,7 +1,6 @@
-
 import Layout from "../../components/Layout";
+import { Conferences} from '../../lib/data';
 
-import { Conferences } from "../../lib/util";
 import { StuyConference, GenericConference } from "../../components/ConferenceTypes";
 import Link from "next/link";
 
@@ -12,7 +11,7 @@ export default function ConferencePage({ name, conference }) {
         if (conference.type == 'stuy') {
             ConferenceComponent  = StuyConference;
         }
-        else if (conference.type = 'other') {
+        else if (conference.type == 'other') {
             ConferenceComponent =  GenericConference;
         }
 
@@ -23,6 +22,7 @@ export default function ConferencePage({ name, conference }) {
         <Layout title={name}>
             <div><h1>{name}</h1></div>
             {getConferenceComponent(conference)}
+            <br/><hr/>
             <Link href={'/conferences/'}>Go Back to Conferences</Link>
         </Layout>
     );

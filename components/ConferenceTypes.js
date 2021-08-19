@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import { isHttpLink } from '../lib/util';
 
-export function GenericConference({ name, conference }) {
+export function GenericConference({ _, conference }) {
 
     function getSignupLink(conference) {
-        if (isHttpLink(conference)) {
-            return <Link href={conference['signup-link']}>Signup Here!</Link>
+        const link = conference['signup-link'];
+
+        if (isHttpLink(link)) {
+            return <Link href={link}>Signup Here!</Link>;
         } else {
-            return <p>Signups opening soon!</p>
+            return <p>Signups opening soon!</p>;
         }
     }
 

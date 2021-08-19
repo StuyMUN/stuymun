@@ -1,6 +1,7 @@
 import Layout from '../components/Layout.js'
 import React from "react";
-import { Conferences } from '../lib/util';
+
+import { Conferences } from '../lib/data';
 
 import Link from 'next/link';
 

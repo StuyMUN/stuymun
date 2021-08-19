@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../../../components/Layout';
-import { Conferences, isHttpLink } from '../../../lib/util';
+
+import { isHttpLink } from '../../../lib/util';
+import { Conferences } from '../../../lib/data';
+
 
 export default function CommitteePage({ committee, conference }) {
 
