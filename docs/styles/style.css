@@ -5,6 +5,7 @@
   --bg-light-100: #ffffff;
   --bg-light-200: #007ab3;
   --bg-light-400: #006999;
+  --ff-accent: -apple-system, BlinkMacSystemFont, sans-serif;
   --ff-header: 'Patua One', cursive;
   --ff-body: 'Nunito', sans-serif;
 }
@@ -64,10 +65,9 @@ nav #special {
 }
 
 h1 {
-  font-family: var(--ff-header);
+  font-family: var(--ff-accent);
   font-weight: 900;
   line-height: 1;
-  letter-spacing: 1px;
 }
 
 h2 {
@@ -92,7 +92,7 @@ header {
 
 header h1 {
   font-size: 46px;
-  letter-spacing: 3.2px;
+  letter-spacing: 1px;
   color: white;
 }
 
@@ -113,6 +113,13 @@ html {
   overflow-x: hidden;
   background: var(--bg) no-repeat center center fixed;
   background-size: cover;
+}
+
+@media (max-width: 830px) {
+  html {
+    background: url(../assets/UNv2-vert.svg.png) no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 
 section {
