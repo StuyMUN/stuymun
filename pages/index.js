@@ -10,6 +10,7 @@ export default function HomePage() {
                 <li><Link href={'/about'}><a>About Us!</a></Link></li>
                 <li><Link href={'/our-team'}><a>Our Team!</a></Link></li>
                 <li><Link href={'/conferences'}><a>Conferences!</a></Link></li>
+                <li><Link href={'/news'}><a>News!</a></Link></li>
             </ul>
         </ Layout>
     );
