@@ -97,18 +97,13 @@ html {
 	-o-background-size: cover;
 	background-size: cover;
 }
-@media only screen and (max-width: 830px) {
-	html {
-		background-image:url("../assets/UNv2-vert-min.png"); 
-		background-position:center; 
-		background-attachment:fixed; 
-		-o-background-size:cover; 
-		-moz-background-size:cover; 
-		-webkit-background-size:cover; 
-		background-size:100% 100%; 
-		background-repeat:no-repeat;
+@media (max-width: 830px) {
+	@supports (-webkit-touch-callout: none) {
+		html {
+			background: url('../assets/UNv2-vert-min.png') center top no-repeat scroll;
+			background-size: auto 100vh;
+		}    
 	}
-
 }
 section {
 	padding: 3rem 0;
