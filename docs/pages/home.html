@@ -26,26 +26,38 @@
 
 <body>
     <div class="bg-logo">
-        <nav>
+        <nav id="main-nav">
             <div class="nav-title">
                 <img src="../assets/munlogo-transparent.png">
-                <div class="link-txt">StuyMUN</div>
+                <div class="link-txt"  id="special">StuyMUN</div>
             </div>
-            <a href="resources.html">
-                <div class="dropdown link-txt">Resources
-                    <!-- <div class="dropdown-content">
-                        <a href="#">Delegate Guides</a>
-                        <a href="#">Forms</a>
-                    </div>     -->
-                </div>
-            </a>
+            <a href="resources.html"><div class="link-txt">Resources</div></a>
             <a href="#"><div class="link-txt">Conferences</div></a>
             <a href="#"><div class="link-txt">Secretariat</div></a>
             <a href="#"><div class="link-txt">About</div></a>
         </nav>
+        <nav class="mobile-nav" role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <a href="resources.html"><li>Resources</li></a>
+                    <a href="#"><li>Conferences</li></a>
+                    <a href="#"><li>Secretariat</li></a>
+                    <a href="#"><li>About</li></a>
+                </ul>
+            </div>
+            <div class="nav-title-m" id="nav-m">
+                <img src="../assets/munlogo-transparent.png">
+                <div class="link-txt"  id="special">StuyMUN</div>
+            </div>
+        </nav>
     </div>
 
-    <div class="main-container">
+    <div>
         <header>
             <div class="text-center">
                 <h1>Countdown To StuyMUNC</h1>
