@@ -11,11 +11,13 @@ export default function NewsPage({ news }) {
     for (let slug in news) {
         let post = news[slug];
 
+        const { year, month, day } = post.metadata.date;
+
         newsElements.push(
             <li style={{marginBottom: "25px"}} key={i++}>
                 <div style={{backgroundColor: "lightpink"}}>
                     <h2>{post.metadata.title} ({slug})</h2>
-                    <p>{post.metadata.date.year}</p>
+                    <p>{year}-{month}-{day}</p>
                     <div dangerouslySetInnerHTML={{__html: post.content}} />
                 </div>
             </li>
