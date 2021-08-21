@@ -1,4 +1,4 @@
-export { default as ConferenceTypes } from "./ConferenceTypes";
+export { GenericConference, StuyConference } from "./ConferenceTypes";
 export { default as Layout } from "./Layout";
 export { default as NamedList } from "./NamedList";
 export { default as NamedObject } from "./NamedObject";
