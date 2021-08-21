@@ -1,5 +1,5 @@
 :root {
-  --bg: url(../assets/UNv2.svg.png);
+  --bg: url(../assets/UN-blur-01.png);
   --bg-logo: rgba(66, 195, 255, 0);
   --bg-logo-dark: rgb(40, 144, 192);
   --bg-light-100: #ffffff;
@@ -81,7 +81,6 @@ h3 {
   font-family: var(--ff-accent);
   font-weight: 900;
   line-height: 1;
-  letter-spacing: 1px;
   margin-bottom: 1em;
 }
 
@@ -137,8 +136,6 @@ section #special img {
   margin-inline: auto;
   width: min(98%, 90rem);
   margin-block: 1rem;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2);
@@ -149,8 +146,6 @@ section #special img {
   margin-inline: auto;
   width: min(90%, 85rem);
   padding: 2em;
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
