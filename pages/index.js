@@ -1,7 +1,8 @@
-import Layout from '../components/Layout.js';
+import { Layout, NewsPosts} from '../components/';
+import { News } from '../lib/data';
 import Link from 'next/link';
 
-export default function HomePage() {
+export default function HomePage({news}) {
     return (
         <Layout title={'StuyMUN'} isRoot={true}>
             <div>Welcome to StuyMun</div>
@@ -12,7 +13,17 @@ export default function HomePage() {
                 <li><Link href={'/conferences'}><a>Conferences!</a></Link></li>
                 <li><Link href={'/news'}><a>News!</a></Link></li>
             </ul>
+            <br/>
+            <NewsPosts news={news}/>
+            {/* <UpcomingConferences conferences={others}/>             */}
         </ Layout>
     );
 }
 
+export async function getStaticProps() {
+    return {
+        props: {
+            news: await News.getPosts(),
+        }
+    };
+}
