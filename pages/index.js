@@ -1,8 +1,8 @@
-import { Layout, NewsPosts} from '../components/';
-import { News } from '../lib/data';
+import { Layout, NewsPosts, UpcomingConferences} from '../components/';
+import { Conferences, News } from '../lib/data';
 import Link from 'next/link';
 
-export default function HomePage({news}) {
+export default function HomePage({news, others}) {
     return (
         <Layout title={'StuyMUN'} isRoot={true}>
             <div>Welcome to StuyMun</div>
@@ -15,7 +15,7 @@ export default function HomePage({news}) {
             </ul>
             <br/>
             <NewsPosts news={news}/>
-            {/* <UpcomingConferences conferences={others}/>             */}
+            <UpcomingConferences conferences={Object.entries(others)}/>            
         </ Layout>
     );
 }
@@ -24,6 +24,7 @@ export async function getStaticProps() {
     return {
         props: {
             news: await News.getPosts(),
+            others: await Conferences.getOtherConferences()
         }
     };
 }

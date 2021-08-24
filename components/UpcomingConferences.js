@@ -1,23 +1,17 @@
-import sortByDate from '../lib/date-sorter'
-import GenericConference from './ConferenceTypes'
+import { sortByDate } from '../lib/date-sorter'
+import { GenericConference } from './ConferenceTypes'
 
-export default function UpcomingConferences( conferences, getDate ){
-
-    // let conferenceElements = [], i = 0;
-    // for (let slug in news) {
-    //     newsElements.push(<li key={i++}><GenericConference name={_} conferences={conferences}/></li>);
-    // }
-    // }
-
-    conferences = sortByDate(conferences, { getDate: getDate });
+export default function UpcomingConferences({ conferences }){
+    
+    conferences = sortByDate(conferences, { getDate: e => e[1].date });
 
     return (<div style={{marginBlock: "15px"}}>
          <ul>
-             {conferences.map(([_, conferences], i) => 
+             {conferences.map(([name, conference], i) => 
                 <li key={i}>
-                    <GenericConference name={_} conferences={conferences}/>
+                    <GenericConference name={name} conference={conference} />
                 </li>
              )}
          </ul>
-     </div>);
+    </div>);
 }
