@@ -1,4 +1,4 @@
-Frontend prototype is [here!](https://stuymun.github.io/stuymun/pages/home.html)
+Frontend prototype is [here!](https://stuymun.github.io/stuymun/pages/index.html)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
