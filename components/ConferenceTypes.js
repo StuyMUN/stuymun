@@ -1,16 +1,15 @@
 import Link from 'next/link';
+import { isHttpLink } from '../lib/util';
 
-export function GenericConference({ name, conference }) {
-    function hasSignupLink(conference) {
-        return conference['signup-link'] !== undefined && 
-            conference['signup-link'].startsWith("http");
-    }
+export function GenericConference({ _, conference }) {
 
     function getSignupLink(conference) {
-        if (hasSignupLink(conference)) {
-            return <Link href={conference['signup-link']}>Signup Here!</Link>
+        const link = conference['signup-link'];
+
+        if (isHttpLink(link)) {
+            return <Link href={link}>Signup Here!</Link>;
         } else {
-            return <p>Signups opening soon!</p>
+            return <p>Signups opening soon!</p>;
         }
     }
 
@@ -32,12 +31,8 @@ export function StuyConference({ name, conference }) {
         return <Link href={`/conference/${conferenceName}/${committee}`}><a>{committee}</a></Link>
     }
     
-    function createMarkup(html) {
-        return {__html: html}
-    }
-
     return (<div>
-            <div dangerouslySetInnerHTML={createMarkup(conference.details.content)} />
+            <div dangerouslySetInnerHTML={{__html: conference.details.content}} />
             
             <ul>
                 {conference.committees.map((entry, i) => 
