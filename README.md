@@ -1,6 +1,8 @@
 # stuymun
+=======
+Frontend prototype is [here!](https://stuymun.github.io/stuymun/pages/index.html)
 
-StuyMUN's official website developed with React and Next.js.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## TODO
 
@@ -10,3 +12,5 @@ StuyMUN's official website developed with React and Next.js.
 * clean conference backend/helper code (util.js)
 * sort conferences by date
 * styling
+
+
