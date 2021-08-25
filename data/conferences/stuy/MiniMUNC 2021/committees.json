@@ -1,0 +1,44 @@
+[
+    {
+        "name": "ECOSOC",
+        "chair": "Neve Diaz Carr",
+        "codirector": "Co-Director: Aaron Hui",
+        "description": "According to the OECD, about 14 percent of all jobs today are vulnerable to automation, with estimates varying among individual nations.",
+        "bglink": ""
+    },
+    {
+        "name": "SOCHUM",
+        "chair": "Naya Mukul",
+        "codirector": "Co-Director: Cameron Kluger",
+        "description": "Ethnic conflict has been a major issue in the world arguably since human civilization began.",
+        "bglink": "TBA"
+    },
+    {
+        "name": "NYC Fiscal Crisis",
+        "chair": "Maya Dunayer",
+        "codirector": "Co-Director: Danielle Que",
+        "description": "The year is 2050 and New York City is enduring yet another fiscal crisis, only 75 years after the last one.",
+        "bglink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+        "name": "Occupation of Cyprus",
+        "chair": "Ian Graham Martinez",
+        "codirector": "Co-Director: Jerry Yang",
+        "description": "In 1959, Britain signed away its 81 year rule over Cyprus, allowing the country to declare itself an independent republic.",
+        "bglink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+        "name": "England 1066",
+        "chair": "Justin Murdock",
+        "codirector": "Co-Directors: Emma Yuditsky and Lianne Ohayon",
+        "description": "The Battle of Hastings occurred on October 14th, 1066.",
+        "bglink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+        "name": "MCU",
+        "chair": "Olivia Tedesco",
+        "codirector": "Co-Directors: James Kang and Andrey Sokolov",
+        "description": "The Marvel Cinematic Universe (or the MCU) is one of the most well-known franchises in the history of the movie industry, and has influenced modern media over the past decade astronomically.",
+        "bglink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+]
