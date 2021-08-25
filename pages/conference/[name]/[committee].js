@@ -1,66 +1,58 @@
 import React from 'react';
-import Link from 'next/link';
 import Layout from '../../../components/Layout';
+import { getSiteData } from '../../../lib/data';
 
-import { isHttpLink } from '../../../lib/util';
-import { Conferences } from '../../../lib/data';
-
-
-export default function CommitteePage({ committee, conference }) {
-
-    const { name, description, chair, codirector, bglink } = committee;
-
-    function getBGLink(bglink) {
-        if (isHttpLink(bglink)) {
-            return <Link href={bglink}>Check out this Background Guide!</Link>
-        } else {
-            return <p>Background Guide coming soon!</p>
-        }
+class CommitteePage extends React.Component {
+    
+    constructor(props) {
+        super(props);
     }
 
-    return (
-        <Layout title={name}>
-            
-            <h2>{name}</h2><br/>
-            <i>Chair: {chair}</i><br/>
-            <i>{codirector}</i><br/>
-            <p>{description}</p><br/>
-            {getBGLink(bglink)}<br/><br/>
-            <hr/>
+    render() {
+        const { name, description } = this.props;
 
-            <Link href={`/conference/${conference}`}>Go back to conference</Link>
-        </Layout>
-    );
+        return (
+            <Layout title={name}>
+                <h3>{name}</h3>
+                <p>{description}</p>
+            </Layout>
+        );
+    }
 }
 
+export default CommitteePage;
+
 export async function getStaticProps({ params }) {
-    const committees = 
-        (await Conferences.getStuyConference(params.name)).committees;
+    const site = await getSiteData();
+
+    const committees = site['conferences'][params.name].committees;
 
     let props = {};
 
     for (let committee of committees) {
         if (committee.name == params.committee) {
-            props = { committee:committee, conference: params.name };
+            props = committee;
             break;
         }
     }
 
-    return { props };
+    return { 
+        props
+    };
 }
 
 export async function getStaticPaths() {
-    let conferences = 
-        await Conferences.getStuyConferences();
+    let site = await getSiteData(),
+        conferences = site['conferences'];
     
     let paths = [];
-    for (let name in conferences) {
-        let committees = conferences[name].committees;
+    for (let conference in conferences) {
+        let committees = conferences[conference].committees;
 
         for (let committee of committees) {
             paths.push({
                 params: { 
-                    name: name, 
+                    name: conference, 
                     committee: committee.name 
                 }
             });

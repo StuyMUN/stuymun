@@ -1,0 +1,10 @@
+{
+    "host": "StuyMUNC",
+    "date": "tomorrow",
+    "location": "the street",
+
+    "rules": [
+        "no swearing",
+        "clothes"
+    ]
+}

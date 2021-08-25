@@ -1,10 +1,11 @@
 import Layout from '../components/Layout';
 import NamedList from '../components/NamedList';
-import { Site } from '../lib/data';
+import { getSiteData } from '../lib/data';
 
 import styles from '../styles/OurTeam.module.css';
 
 export default function OurTeamPage({ groups }) {
+
     return (
         <Layout title={'Team Page'}>
             <div className={styles.members}>
@@ -22,9 +23,6 @@ export default function OurTeamPage({ groups }) {
 }
 
 export async function getStaticProps() {
-    return {
-        props: {
-            groups: await Site.getData('our-team')
-        }
-    };
+    let site = await getSiteData();
+    return { props: { groups: site['our-team'] } };
 }
