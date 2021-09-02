@@ -1,11 +1,9 @@
-Formation
-========================
+# Venimus, Vidimus, Gavelimus
 
-According to all known laws of aviation,there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.
+The Stuyvesant Model United Nations team, commonly called StuyMUN, is made up of students from Stuyvesant High School in New York, NY. Members are trained to be well equipped for collegiate competitions in some of the nation's most prestigious institutions. The team regularly brings home awards, and is ranked amongst the top 15 teams in the nation by Best Delegate.  
+Every April, the team also hosts its own conference, the Stuyvesant Model United Nations Conference, which attracts delegates from around the New York area.
 
-DFSGSHDSFH
+## Conclusion
+Sussus Amogus  
 
-Conclusion
--------------------
-
-The bee, of course, flies anyway because bees don't care what humans think is impossible.
+![sus](img/sus.jpg)

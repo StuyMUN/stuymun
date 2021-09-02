@@ -1,53 +1,45 @@
-
 import Layout from "../../components/Layout";
-import NamedObject from "../../components/NamedObject";
-import { getSiteData } from "../../lib/data";
+import { Conferences} from '../../lib/data';
 
-import Link from 'next/link';
+import { StuyConference, GenericConference } from "../../components/ConferenceTypes";
+import Link from "next/link";
 
-export default function ConferencePage({ name, details, committees }) {
+export default function ConferencePage({ name, conference }) {
 
-    function getCommitteeLink(conferenceName, committee) {
-        return <Link href={`/conference/${conferenceName}/${committee}`}><a>{committee}</a></Link>
+    function getConferenceComponent(conference) {
+        let ConferenceComponent;
+        if (conference.type == 'stuy') {
+            ConferenceComponent  = StuyConference;
+        }
+        else if (conference.type == 'other') {
+            ConferenceComponent =  GenericConference;
+        }
+
+        return <ConferenceComponent name={name} conference={conference} />;
     }
 
     return (
         <Layout title={name}>
             <div><h1>{name}</h1></div>
-            
-            <NamedObject 
-                title={'Details'} 
-                object={details}
-            />
-            
-            <ul>
-                {committees.map((entry, i) => 
-                    <li key={i}>
-                        {getCommitteeLink(name, entry.name)}
-                    </li>
-                )}
-            </ul>
-        
+            {getConferenceComponent(conference)}
+            <br/><hr/>
+            <Link href={'/conferences/'}>Go Back to Conferences</Link>
         </Layout>
     );
 }
 
 export async function getStaticProps({ params }) {
-    const site = await getSiteData();
-    const conference = site['conferences'][params.name];
-    
     return {
         props: {
             name: params.name,
-            details: conference.details,
-            committees: conference.committees
+            conference: await Conferences.getConference(params.name)
         }
     };
 }
 
 export async function getStaticPaths() {
-    const site = await getSiteData();
-    let cnfs = Object.keys(site['conferences']);
+    const cnfs = 
+        Object.keys(await Conferences.getConferences());
     
     return { 
         paths: cnfs.map(cnf => {
