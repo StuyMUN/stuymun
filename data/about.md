@@ -6,4 +6,4 @@ Every April, the team also hosts its own conference, the Stuyvesant Model United
 ## Conclusion
 Sussus Amogus  
 
-![sus](img/sus.jpg)
+![sus](/img/sus.jpg)

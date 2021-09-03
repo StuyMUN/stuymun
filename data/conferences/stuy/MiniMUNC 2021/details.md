@@ -9,4 +9,4 @@ date:
 ## Conclusion
 Sussus Amogus  
 
-![sus](img/sus.jpg)
+![sus](/img/sus.jpg)
