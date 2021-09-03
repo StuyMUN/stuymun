@@ -5,6 +5,7 @@ import { sortByDate } from '../lib/date-sorter';
 import { Conferences } from '../lib/data';
 
 import Link from 'next/link';
+import { ConferenceFeed } from '../components';
 
 export default function ConferencesPage({ stuy, other }) {
     function getConferenceLink(name) {
@@ -27,20 +28,22 @@ export default function ConferencesPage({ stuy, other }) {
         <Head>
             <title>Conferences | StuyMUN</title>
         </Head>
-        
-        <div>Conferences: </div>
-        {getConferenceSection(stuy, e => e[1].details.metadata.date)}
-        {getConferenceSection(other, e => e[1].date)}
+
+        <section>
+            <div className="container bg-light-200">
+                <ConferenceFeed conferences={other} />
+            </div>
+        </section>
+        {/* {getConferenceSection(stuy, e => e[1].details.metadata.date)} */}
+        {/* {getConferenceSection(other, e => e[1].date)} */}
     </>;
 }
 
 export async function getStaticProps() {
     return {
         props: {
-            // these Object-dot calls are kinda whack cause they make big arrays
-            // these can be replaced by some sort of iterator class
-            stuy: Object.entries(await Conferences.getStuyConferences()),
-            other: Object.entries(await Conferences.getOtherConferences())
+            stuy: await Conferences.getStuyConferences(),
+            other: await Conferences.getOtherConferences()
         }
     };
 }
