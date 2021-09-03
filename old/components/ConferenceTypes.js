@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { isHttpLink } from '../lib/util';
+import { isHttpLink } from '../../lib/util';
 
 export function GenericConference({ _, conference }) {
 

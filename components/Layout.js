@@ -1,20 +1,17 @@
-import styles from '../styles/Layout.module.css';
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from "next/head";
+import Navbar from "./Navbar";
 
-export default function Layout({ children, title, root }) {
-    return (
-        <div className={styles.root}>
-            <Head>
-                <title>{ title }</title>
-            </Head>
-            <div className={styles.content}>
-                {children}
-            </div>
-            { 
-                !root && 
-                <Link href={'/'}><a>Go Back Home!</a></Link>
-            }
-        </div>
-    );
+export default function Layout({ children }) {
+    return <>
+        <Head>
+            <meta charset="UTF-8" />
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+            <title>StuyMUN</title>
+        </Head>
+
+        <Navbar />
+        {children}
+    </>;
 }

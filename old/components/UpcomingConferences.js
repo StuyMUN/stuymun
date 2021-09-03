@@ -1,4 +1,4 @@
-import { sortByDate } from '../lib/date-sorter'
+import { sortByDate } from '../../lib/date-sorter'
 import { GenericConference } from './ConferenceTypes'
 
 export default function UpcomingConferences({ conferences }){
