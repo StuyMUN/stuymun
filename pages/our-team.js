@@ -1,13 +1,10 @@
-import Layout from '../components/Layout';
-import NamedList from '../components/NamedList';
+import { Layout, NamedList } from '../old/components';
 import { Site } from '../lib/data';
-
-import styles from '../styles/OurTeam.module.css';
 
 export default function OurTeamPage({ groups }) {
     return (
         <Layout title={'Team Page'}>
-            <div className={styles.members}>
+            <div>
                 <h2>Our team!</h2>
                 {groups.map((group, i) => 
                     <NamedList 

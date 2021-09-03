@@ -1,4 +1,4 @@
-import Layout from '../components/Layout.js'
+import Layout from '../old/components/Layout.js'
 import React from "react";
 
 import { sortByDate } from '../lib/date-sorter';

@@ -1,7 +1,7 @@
-import Layout from "../../components/Layout";
+import Layout from "../../old/components/Layout";
 import { Conferences} from '../../lib/data';
 
-import { StuyConference, GenericConference } from "../../components/ConferenceTypes";
+import { StuyConference, GenericConference } from "../../old/components/ConferenceTypes";
 import Link from "next/link";
 
 export default function ConferencePage({ name, conference }) {

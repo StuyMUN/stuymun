@@ -1,10 +1,10 @@
-import { Layout, NewsPosts, UpcomingConferences } from '../components/';
+import { Layout } from '../components';
 import { Conferences, News } from '../lib/data';
 import Link from 'next/link';
 
 export default function HomePage({news, others}) {
     return (
-        <Layout title={'StuyMUN'} root>
+        <Layout>
             <div>Welcome to StuyMun</div>
             <div>Pages: </div>
             <ul>
@@ -14,8 +14,6 @@ export default function HomePage({news, others}) {
                 <li><Link href={'/news'}><a>News!</a></Link></li>
             </ul>
             <br/>
-            <NewsPosts news={news}/>
-            <UpcomingConferences conferences={Object.entries(others)}/>            
         </ Layout>
     );
 }

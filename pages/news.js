@@ -1,11 +1,12 @@
-import { Layout, NewsPosts } from '../components';
+import { Layout } from '../components';
+import { NewsPosts } from '../old/components';
 
 import { News } from '../lib/data';
 
 export default function NewsPage({news}) {
 
     return (
-        <Layout title={'News'}>
+        <Layout>
             <NewsPosts news={news}/>
         </Layout>
     );

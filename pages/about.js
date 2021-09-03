@@ -1,4 +1,4 @@
-import Layout from '../components/Layout';
+import { Layout } from '../old/components';
 import { Site } from '../lib/data';
 
 export default function AboutPage({about}) {

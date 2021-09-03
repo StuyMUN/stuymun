@@ -1,4 +1,4 @@
-import { NewsPost, Layout } from '../../components'
+import { NewsPost, Layout } from '../../old/components'
 import { News } from '../../lib/data';
 
 export default function PostPage({ slug, post }){
