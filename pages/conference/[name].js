@@ -1,31 +1,33 @@
-import Layout from "../../old/components/Layout";
-import { Conferences} from '../../lib/data';
+import { Conferences } from '../../lib/data';
 
 import { StuyConference, GenericConference } from "../../old/components/ConferenceTypes";
 import Link from "next/link";
+import Head from 'next/head';
 
 export default function ConferencePage({ name, conference }) {
 
     function getConferenceComponent(conference) {
         let ConferenceComponent;
         if (conference.type == 'stuy') {
-            ConferenceComponent  = StuyConference;
+            ConferenceComponent = StuyConference;
         }
         else if (conference.type == 'other') {
-            ConferenceComponent =  GenericConference;
+            ConferenceComponent = GenericConference;
         }
 
         return <ConferenceComponent name={name} conference={conference} />;
     }
 
-    return (
-        <Layout title={name}>
-            <div><h1>{name}</h1></div>
-            {getConferenceComponent(conference)}
-            <br/><hr/>
-            <Link href={'/conferences/'}>Go Back to Conferences</Link>
-        </Layout>
-    );
+    return <>
+        <Head>
+            <title>{name} | StuyMUN</title>
+        </Head>
+
+        <div><h1>{name}</h1></div>
+        {getConferenceComponent(conference)}
+        <br /><hr />
+        <Link href={'/conferences/'}>Go Back to Conferences</Link>
+    </>;
 }
 
 export async function getStaticProps({ params }) {
@@ -38,13 +40,13 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const cnfs = 
+    const cnfs =
         Object.keys(await Conferences.getConferences());
-    
-    return { 
+
+    return {
         paths: cnfs.map(cnf => {
-            return { params: {name: cnf} };
-        }), 
-        fallback: false 
+            return { params: { name: cnf } };
+        }),
+        fallback: false
     };
 }

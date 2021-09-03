@@ -1,12 +1,14 @@
-import { NewsPost, Layout } from '../../old/components'
+import { NewsPost } from '../../old/components'
 import { News } from '../../lib/data';
+import Head from 'next/head';
 
 export default function PostPage({ slug, post }){
-    return(
-        <Layout title={slug}>
+    return <>
+        <Head>
+            <title>{post.title} | StuyMUN</title>
+        </Head>
         <NewsPost slug={slug} post={post}/>
-        </Layout>
-    )
+    </>;
 }
 
 export async function getStaticProps({ params }) {

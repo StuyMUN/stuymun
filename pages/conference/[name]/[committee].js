@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import Layout from '../../../old/components/Layout';
 
 import { isHttpLink } from '../../../lib/util';
 import { Conferences } from '../../../lib/data';
+import Head from 'next/head';
 
 
 export default function CommitteePage({ committee, conference }) {
@@ -18,30 +18,31 @@ export default function CommitteePage({ committee, conference }) {
         }
     }
 
-    return (
-        <Layout title={name}>
-            
-            <h2>{name}</h2><br/>
-            <i>Chair: {chair}</i><br/>
-            <i>{codirector}</i><br/>
-            <p>{description}</p><br/>
-            {getBGLink(bglink)}<br/><br/>
-            <hr/>
+    return <>
+        <Head>
+            <title>{name} | StuyMUN</title>            
+        </Head>
 
-            <Link href={`/conference/${conference}`}>Go back to conference</Link>
-        </Layout>
-    );
+        <h2>{name}</h2><br />
+        <i>Chair: {chair}</i><br />
+        <i>{codirector}</i><br />
+        <p>{description}</p><br />
+        {getBGLink(bglink)}<br /><br />
+        <hr />
+
+        <Link href={`/conference/${conference}`}>Go back to conference</Link>
+    </>;
 }
 
 export async function getStaticProps({ params }) {
-    const committees = 
+    const committees =
         (await Conferences.getStuyConference(params.name)).committees;
 
     let props = {};
 
     for (let committee of committees) {
         if (committee.name == params.committee) {
-            props = { committee:committee, conference: params.name };
+            props = { committee: committee, conference: params.name };
             break;
         }
     }
@@ -50,25 +51,25 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    let conferences = 
+    let conferences =
         await Conferences.getStuyConferences();
-    
+
     let paths = [];
     for (let name in conferences) {
         let committees = conferences[name].committees;
 
         for (let committee of committees) {
             paths.push({
-                params: { 
-                    name: name, 
-                    committee: committee.name 
+                params: {
+                    name: name,
+                    committee: committee.name
                 }
             });
         }
     }
 
-    return { 
+    return {
         paths: paths,
-        fallback: false 
+        fallback: false
     };
 }

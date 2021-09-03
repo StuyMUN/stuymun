@@ -1,15 +1,14 @@
-import { Layout } from '../components';
 import { NewsPosts } from '../old/components';
-
+import Head from 'next/head';
 import { News } from '../lib/data';
 
 export default function NewsPage({news}) {
-
-    return (
-        <Layout>
-            <NewsPosts news={news}/>
-        </Layout>
-    );
+    return <>
+        <Head>
+            <title>News | StuyMUN</title>
+        </Head>
+        <NewsPosts news={news}/>
+    </>;
 }
 
 export async function getStaticProps() {
