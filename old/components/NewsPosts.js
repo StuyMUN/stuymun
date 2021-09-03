@@ -4,12 +4,8 @@ export default function NewsPosts({ news }) {
  
     let newsElements = [], i = 0;
     for (let slug in news) {
-        newsElements.push(<li key={i++}><NewsPost slug={slug} post={news[slug]}/></li>);
+        newsElements.push(<div key={i++}><NewsPost slug={slug} post={news[slug]}/></div>);
     }
 
-    return (
-        <ul>
-            {newsElements}
-        </ul>
-    );
+    return <>{newsElements}</>;
 }
