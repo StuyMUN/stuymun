@@ -5,9 +5,9 @@ export default function Navbar({ }) {
 
     // eslint-disable-next-line @next/next/no-img-element
     const FilledImage = <img
-        alt={"MUNLOGO"} 
+        alt="MUNLOGO"
         src="/img/munlogo-transparent.png"
-        width={"80px"} height={"70px"}
+        width="80px" height="70px"
     />;
 
     return <div id="nav">
@@ -15,8 +15,8 @@ export default function Navbar({ }) {
         <nav id="main-nav">
             <Link href='/'>
                 <div className="nav-title">
-                {FilledImage}
-                <div className="link-txt" id="special">StuyMUN</div>
+                    {FilledImage}
+                    <div className="link-txt" id="special">StuyMUN</div>
                 </div>
             </Link>
             <Link href={"/resources"}><div className="link-txt">Resources</div></Link>
