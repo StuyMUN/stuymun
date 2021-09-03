@@ -1,11 +1,5 @@
 // import Image from 'next/image';
-import NextLink from 'next/link';
-
-function Link({ children, href }) {
-    return <NextLink href={href}>
-        <a>{children}</a>
-    </NextLink>;
-}
+import { Link } from './Link';
 
 export default function Navbar({ }) {
 
@@ -17,6 +11,7 @@ export default function Navbar({ }) {
     />;
 
     return <div id="nav">
+
         <nav id="main-nav">
             <Link href='/'>
                 <div className="nav-title">
@@ -26,7 +21,7 @@ export default function Navbar({ }) {
             </Link>
             <Link href={"/resources"}><div className="link-txt">Resources</div></Link>
             <Link href={"/conferences"}><div className="link-txt">Conferences</div></Link>
-            <Link href={"/our-team"}><div className="link-txt">Secretariat</div></Link>
+            <Link href={"/secretariat"}><div className="link-txt">Secretariat</div></Link>
             <Link href={"/about"}><div className="link-txt">About</div></Link>
         </nav>
 
@@ -40,7 +35,7 @@ export default function Navbar({ }) {
                 <ul id="menu">
                     <Link href={"/resources"}><li>Resources</li></Link>
                     <Link href={"/conferences"}><li>Conferences</li></Link>
-                    <Link href={"/our-team"}><li>Secretariat</li></Link>
+                    <Link href={"/secretariat"}><li>Secretariat</li></Link>
                     <Link href={"/about"}><li>About</li></Link>
                 </ul>
             </div>
@@ -49,5 +44,6 @@ export default function Navbar({ }) {
                 <Link href={"/"}>{FilledImage}</Link>
             </div>
         </nav>
+
     </div>;
 }
