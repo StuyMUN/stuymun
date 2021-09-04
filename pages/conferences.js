@@ -4,7 +4,7 @@ import React from "react";
 import { Conferences } from '../lib/data';
 
 import Link from 'next/link';
-import { ConferenceFeed, Pill } from '../components';
+import { ConferenceFeed, OtherFeed, Pill, StuyFeed } from '../components';
 
 export default function ConferencesPage({ stuy, other }) {
     return <>
@@ -13,9 +13,16 @@ export default function ConferencesPage({ stuy, other }) {
         </Head>
 
         <Pill>
-            <ConferenceFeed conferences={other} />
-            <div><Link href='/'>Go to home</Link></div>
+            <ConferenceFeed title='Our Conferences' conferences={stuy} feed={StuyFeed} />
         </Pill>
+
+        <div style={{height: '250px'}}></div> 
+
+        <Pill>
+            <ConferenceFeed title='Upcoming Conferences' conferences={other} feed={OtherFeed} />
+        </Pill>
+
+        <div><Link href='/'>Go to home</Link></div>
     </>;
 }
 

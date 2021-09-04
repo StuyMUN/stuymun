@@ -1,4 +1,5 @@
 import { Conferences } from '../../lib/data';
+import { OtherConference, StuyConference } from '../../components';
 
 import Link from "next/link";
 import Head from 'next/head';
@@ -11,7 +12,7 @@ export default function ConferencePage({ name, conference }) {
             ConferenceComponent = StuyConference;
         }
         else if (conference.type == 'other') {
-            ConferenceComponent = GenericConference;
+            ConferenceComponent = OtherConference;
         }
 
         return <ConferenceComponent name={name} conference={conference} />;
@@ -24,7 +25,7 @@ export default function ConferencePage({ name, conference }) {
 
         <section>
             <div className="container bg-light-200">
-                <div><h1>{name}</h1></div>
+                {getConferenceComponent(conference)}
                 <div><Link href={'/conferences/'}>Go Back to Conferences</Link></div>
                 <div><Link href={'/'}>Go Back Home</Link></div>
             </div>
@@ -44,20 +45,12 @@ export async function getStaticProps({ params }) {
 import '../../lib/object';
 
 export async function getStaticPaths() {
-    const Database = [
-        await Conferences.getStuyConferences(),
-        await Conferences.getOtherConferences()
-    ];
-
-    let paths = [];
-    for (let conferences of Database) {
-        for (let [ name, _ ] of conferences.iterable()) {
-            paths.push({ params: { name: name }});
-        }
-    }
+    const cnfs = await Conferences.getConferences();
 
     return {
-        paths: paths,
+        paths: cnfs.map(([name, _cnf], _i) => {
+            return { params: { name : name }};
+        }),
         fallback: false
     };
 }

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Conferences, News } from '../lib/data';
-import { NewsFeed, ConferenceFeed, Link } from '../components';
+import { NewsFeed, ConferenceFeed, Link, OtherFeed } from '../components';
 
 export default function HomePage({ posts, conferences }) {
     return <>
@@ -18,7 +18,10 @@ export default function HomePage({ posts, conferences }) {
         <section className="content-container">
             <div className="content-split">
                 <NewsFeed posts={posts} />
-                <ConferenceFeed conferences={conferences} />
+                <ConferenceFeed
+                    conferences={conferences}
+                    feed={OtherFeed}
+                />
             </div>
         </section>
     </>;

@@ -1,28 +1,22 @@
-import { Post } from './Post';
-import Link from './Link';
 import '../lib/object';
-import { isHttpLink } from '../lib/util';
+import { OtherConference, StuyConference } from './ConferenceTypes';
 
-export default function ConferenceFeed({ conferences, title }) {
+export const OtherFeed = (name, conference) => {
+    return <OtherConference name={name} conference={conference} />;
+};
 
-    function getSignupLink(conference) {
-        const link = conference['signup-link'];
-        if (isHttpLink(link)) {
-            return <Link href={link}>Signup to the Conference!</Link>;
-        } else {
-            return <p>Signups opening soon!</p>;
-        }
-    }
+export const StuyFeed = (name, conference) => {
+    return <StuyConference name={name} conference={conference} />;
+};
+
+// TODO: hybrid feed
+// export const HybridFeed = (name, conference)
+
+export function ConferenceFeed({ conferences, title, feed }) {
 
     function getConference([name, conference], i) {
         return <div key={i}>
-            <Post
-                title={name}
-                content={conference.content}
-                date={conference.date}
-                url={`/conference/${name}`}
-            />
-            {getSignupLink(conference)}
+            {feed(name, conference)} 
         </div>;
     }
 
