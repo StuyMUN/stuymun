@@ -8,4 +8,4 @@ export { default as NewsFeed } from './News';
 export { default as ConferenceFeed } from './Conferences';
 
 export { default as Pill } from './Pill';
-export { Post } from './Post';
+export { Post, Markdown, Date } from './Post';
