@@ -18,7 +18,7 @@ export default function ConferenceFeed({ conferences, title }) {
         return <div key={i}>
             <Post
                 title={name}
-                content={conference.description}
+                content={conference.content}
                 date={conference.date}
                 url={`/conference/${name}`}
             />
