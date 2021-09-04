@@ -30,10 +30,10 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const posts = await News.getPosts();
+    const posts = await News.getPostMap();
 
     return {
-        paths: posts.map(key => {
+        paths: posts.map(([key, _v], _i) => {
             return { params: { slug: key } };
         }),
         fallback: false
