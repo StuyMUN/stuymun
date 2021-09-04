@@ -1,6 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
-import { Pill } from '../../../components'
+import { Pill, Link } from '../../../components'
 import { isHttpLink } from '../../../lib/util';
 import { Conferences } from '../../../lib/data';
 import Head from 'next/head';
@@ -22,6 +20,7 @@ export default function CommitteePage({ committee, conference }) {
         <Head>
             <title>{name} | StuyMUN</title>
         </Head>
+        
         <Pill>
         <h2>{name}</h2><br />
             <i>Chair: {chair}</i><br />
@@ -55,7 +54,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
     let conferences =
-        await Conferences.getStuyConferences();
+        await Conferences.getStuyConferenceMap();
 
     let paths = [];
     for (let name in conferences) {

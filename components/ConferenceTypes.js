@@ -1,15 +1,15 @@
 import Link from './Link';
 import { Post } from './Post';
-import Pill from './Pill';
+import '../lib/object';
 import { isHttpLink } from '../lib/util';
 
-function CommitteePreview({ committee }) {
+function CommitteePreview({ name, committee }) {
     return <>
-        <h2>{committee.name}</h2>
+        <Link href={`/conference/${name}/${committee.name}`}>{committee.name}</Link>
     </>;
 }
 
-export function StuyConference({ name, conference }) {
+export function StuyConference({ name, conference, hideCommittees }) {
     return <>
         <Post
             title={name}
@@ -17,10 +17,10 @@ export function StuyConference({ name, conference }) {
             url={`/conference/${name}`}
             date={conference.details.date}
         />
-
-        {conference.committees.map((committee, i) => {
+        
+        {!hideCommittees && conference.committees.map((committee, i) => {
             return <div key={i}>
-                <CommitteePreview committee={committee} />
+                <CommitteePreview name={name} committee={committee} />
             </div>;
         })}
     </>;

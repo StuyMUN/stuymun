@@ -6,7 +6,7 @@ export const OtherFeed = (name, conference) => {
 };
 
 export const StuyFeed = (name, conference) => {
-    return <StuyConference name={name} conference={conference} />;
+    return <StuyConference name={name} conference={conference} hideCommittees />;
 };
 
 // TODO: hybrid feed
