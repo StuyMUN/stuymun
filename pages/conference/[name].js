@@ -23,10 +23,14 @@ export default function ConferencePage({ name, conference }) {
             <title>{name} | StuyMUN</title>
         </Head>
 
-        <div><h1>{name}</h1></div>
-        {getConferenceComponent(conference)}
-        <br /><hr />
-        <Link href={'/conferences/'}>Go Back to Conferences</Link>
+        <section>
+            <div className="container bg-light-200">
+                <div><h1>{name}</h1></div>
+                {getConferenceComponent(conference)}
+                <div><Link href={'/conferences/'}>Go Back to Conferences</Link></div>
+                <div><Link href={'/'}>Go Back Home</Link></div>
+            </div>
+        </section>
     </>;
 }
 

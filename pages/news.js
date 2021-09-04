@@ -1,20 +1,24 @@
-import { NewsPosts } from '../old/components';
 import Head from 'next/head';
 import { News } from '../lib/data';
+import { NewsFeed } from '../components';
+import Link from 'next/link';
 
-export default function NewsPage({news}) {
+export default function NewsPage({posts}) {
     return <>
         <Head>
             <title>News | StuyMUN</title>
         </Head>
-        <NewsPosts news={news}/>
+
+        <NewsFeed posts={posts} />
+
+        <Link href={'/'}>Go Back Home</Link>
     </>;
 }
 
 export async function getStaticProps() {
     return {
         props: {
-            news: await News.getPosts()
+            posts: await News.getPosts()
         }
     };
 }

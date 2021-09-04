@@ -20,7 +20,7 @@ export default function CommitteePage({ committee, conference }) {
 
     return <>
         <Head>
-            <title>{name} | StuyMUN</title>            
+            <title>{name} | StuyMUN</title>
         </Head>
 
         <h2>{name}</h2><br />

@@ -1,4 +1,4 @@
-import { NextLink } from "./Link";
+import { Link } from "./Link";
 
 export function Markdown({ content }) {
     return <div dangerouslySetInnerHTML={{__html: content}} />
@@ -7,18 +7,24 @@ export function Markdown({ content }) {
 export function Date({ date }) {
     const { year, month, day } = date;
 
-    return <div className='dateline'>
-        <span className='year'>{year}</span>-
-        <span className='month'>{month}</span>-
-        <span className='day'>{day}</span> | 30d
+    return <div>
+        <span>{year}</span>-
+        <span>{month}</span>-
+        <span>{day}</span> | 30d
     </div>;
 }
 
 export function Post({ title, content, date, url }) {
+
+    let titleComponent = title && <h3>{title}</h3>;
+    
+    titleComponent = url ? 
+        <Link href={url}>{titleComponent || <span>See More</span>}</Link> : 
+        titleComponent;
+
     return <>
-        <h3>{title}</h3>
-        <Date date={date} />
-        <Markdown content={content} />
-        <NextLink href={url}>see more</NextLink>
+        { titleComponent }
+        { date && <Date date={date} />}
+        { content && <Markdown content={content} />}
     </>;
 }
