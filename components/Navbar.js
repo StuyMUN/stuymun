@@ -1,7 +1,35 @@
 // import Image from 'next/image';
+import React, { useState, useEffect } from "react";
 import { Link } from './Link';
 
+
+function useScroll() {
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        function handleScroll() {
+            let currScrollPos = window.pageYOffset;
+            if (scrollPosition > currScrollPos) {
+                document.getElementById("main-nav").style.top = "0px";
+                document.getElementsByClassName("mobile-nav")[0].style.top = "0px";
+            } else {
+                document.getElementById("main-nav").style.top = "-84.63px";
+                document.getElementsByClassName("mobile-nav")[0].style.top = "-84.63px";
+            }
+            setScrollPosition(currScrollPos);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    });
+
+}
+
+
 export default function Navbar({ }) {
+    useScroll();
 
     // eslint-disable-next-line @next/next/no-img-element
     const FilledImage = <img
