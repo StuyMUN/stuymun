@@ -18,8 +18,8 @@ export default function PostPage({ slug, post }) {
                 date={post.metadata.date}
             />
 
-            <Link href={'/'}>Go Back Home</Link>
-            <Link href={'/news'}>Go To News Posts</Link>
+            <div><Link href={'/'}>Go Back Home</Link></div>
+            <div><Link href={'/news'}>Go To News Posts</Link></div>
         </Pill>
     </>;
 }

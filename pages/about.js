@@ -1,17 +1,22 @@
 import { Site } from '../lib/data';
 import Head from 'next/head';
+import Link from '../components/Link';
+import { Pill } from '../components';
 
 export default function AboutPage({ about }) {
     return <>
         <Head>
-            <title>About us</title>
+            <title>About | StuyMUN</title>
         </Head>
 
-        <section>
-            <div className="container bg-light-200">
-                <div dangerouslySetInnerHTML={{ __html: about.content }} />
-            </div>
-        </section>
+        <header className="text-center">
+            <h1>About StuyMUN</h1>
+        </header>
+
+        <Pill>
+            <div dangerouslySetInnerHTML={{ __html: about.content }} />
+            <Link href={'/'}>Go Back Home</Link>
+        </Pill>
     </>
 }
 

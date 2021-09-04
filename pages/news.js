@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { News } from '../lib/data';
-import { NewsFeed } from '../components';
+import { NewsFeed, Pill } from '../components';
 import Link from 'next/link';
 
 export default function NewsPage({posts}) {
@@ -8,10 +8,11 @@ export default function NewsPage({posts}) {
         <Head>
             <title>News | StuyMUN</title>
         </Head>
-
-        <NewsFeed posts={posts} />
-
-        <Link href={'/'}>Go Back Home</Link>
+        
+        <Pill>
+            <NewsFeed posts={posts} />
+            <Link href={'/'}>Go Back Home</Link>
+        </Pill>
     </>;
 }
 

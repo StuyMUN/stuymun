@@ -5,13 +5,13 @@ import Image from 'next/image';
 function LowerMember({ person }) {
     let size = 20;
 
-    let imageSize = `${size-2}px`;
+    let imageSize = `${size - 2}px`;
     /* eslint-disable-next-line @next/next/no-img-element*/
-    const PfpImage = <img src={person.pfp} width={imageSize} height={imageSize } alt="pfp" />;
+    const PfpImage = <img src={person.pfp} width={imageSize} height={imageSize} alt="pfp" />;
 
     let textSize = `${size}px`;
     return <>
-        {person.pfp && PfpImage} <span style={{fontSize: textSize}}>{person.name}</span>
+        {person.pfp && PfpImage} <span style={{ fontSize: textSize }}>{person.name}</span>
     </>;
 }
 
@@ -21,12 +21,14 @@ function Member({ person }) {
 
     return <Pill>
         <table>
-            <tr>
-                <td>{person.pfp && PfpImage}</td>
-                <td>
-                    <span>{person.name}</span>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>{person.pfp && PfpImage}</td>
+                    <td>
+                        <span>{person.name}</span>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </Pill>;
 }
