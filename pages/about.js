@@ -1,7 +1,8 @@
 import { Site } from '../lib/data';
 import Head from 'next/head';
 import Link from '../components/Link';
-import { Pill } from '../components';
+import { Pill, Markdown } from '../components';
+
 
 export default function AboutPage({ about }) {
     return <>
@@ -14,8 +15,8 @@ export default function AboutPage({ about }) {
         </header>
 
         <Pill>
-            <div dangerouslySetInnerHTML={{ __html: about.content }} />
-            <Link href={'/'}>Go Back Home</Link>
+            <Markdown content={about.content}/>
+            <Link href={'/'}>Go back home</Link>
         </Pill>
     </>
 }

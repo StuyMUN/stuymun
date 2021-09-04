@@ -1,6 +1,6 @@
 import { Site } from '../lib/data';
 import { Pill } from '../components';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 function LowerMember({ person }) {
     let size = 20;
@@ -61,9 +61,7 @@ function Position({ rank, position, people }) {
     }
 
     return <>
-        <header className="resources text-center">
-            <h3>{position}</h3>
-        </header>
+        <h3>{position}</h3>
 
         {getMembers()}
     </>;
@@ -84,9 +82,8 @@ function Rank({ rank, data }) {
     }
 
     return <>
-        <header className="resources text-center">
-            <h2>{rank}</h2>
-        </header>
+
+        <h2>{rank}</h2>
 
         {getPositions()}
 
@@ -96,7 +93,7 @@ function Rank({ rank, data }) {
 export default function SecretariatPage({ sec }) {
 
     return <div>
-        <header className="resources text-center">
+        <header className="text-center">
             <h1>Meet the Team</h1>
         </header>
 
