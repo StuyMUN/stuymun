@@ -2,20 +2,17 @@ import { Pill, Post, Link } from '../../components'
 import { News } from '../../lib/data';
 import Head from 'next/head';
 
-export default function PostPage({ slug, post }) {
-    let p = {};
-    p[slug] = post
-
+export default function PostPage({ post }) {
     return <>
         <Head>
-            <title>{post.metadata.title} | StuyMUN</title>
+            <title>{post.title} | StuyMUN</title>
         </Head>
 
         <Pill>
             <Post
-                title={post.metadata.title}
+                title={post.title}
                 content={post.content}
-                date={post.metadata.date}
+                date={post.date}
             />
 
             <div><Link href={'/'}>Go Back Home</Link></div>
@@ -27,7 +24,6 @@ export default function PostPage({ slug, post }) {
 export async function getStaticProps({ params }) {
     return {
         props: {
-            slug: params.slug,
             post: await News.getPost(params.slug)
         }
     };

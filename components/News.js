@@ -4,8 +4,8 @@ import '../lib/object';
 export default function NewsFeed({ posts }) {
     function getPost(slug, post, i) {
         const postProps = {
-            title: post.metadata.title,
-            date: post.metadata.date,
+            title: post.title,
+            date: post.date,
             url: `/post/${slug}`,
             content: post.content
         };
