@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { Pill } from '../../../components'
 import { isHttpLink } from '../../../lib/util';
 import { Conferences } from '../../../lib/data';
 import Head from 'next/head';
@@ -22,15 +22,18 @@ export default function CommitteePage({ committee, conference }) {
         <Head>
             <title>{name} | StuyMUN</title>
         </Head>
-
+        <Pill>
         <h2>{name}</h2><br />
-        <i>Chair: {chair}</i><br />
-        <i>{codirector}</i><br />
-        <p>{description}</p><br />
-        {getBGLink(bglink)}<br /><br />
-        <hr />
+            <i>Chair: {chair}</i><br />
+            <i>{codirector}</i><br />
+            <p>{description}</p><br />
+            {getBGLink(bglink)}<br />
+            <hr />
+            <br/>
+            <div><Link href={`/conference/${conference}`}>Go back to conference</Link></div>
+        </Pill>
 
-        <Link href={`/conference/${conference}`}>Go back to conference</Link>
+
     </>;
 }
 
