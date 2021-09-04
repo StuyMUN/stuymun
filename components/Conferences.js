@@ -14,7 +14,7 @@ export default function ConferenceFeed({ conferences, title }) {
         }
     }
 
-    function getConference(name, conference, i) {
+    function getConference([name, conference], i) {
         return <div key={i}>
             <Post
                 title={name}
