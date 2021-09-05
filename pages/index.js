@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Conferences, News } from '../lib/data';
-import { NewsFeed, ConferenceFeed, Link, OtherFeed } from '../components';
+import { NewsFeed, ConferenceFeed, Link, OtherFeed, HybridFeed } from '../components';
 
 export default function HomePage({ posts, conferences }) {
     return <>
@@ -20,7 +20,7 @@ export default function HomePage({ posts, conferences }) {
                 <NewsFeed posts={posts} />
                 <ConferenceFeed
                     conferences={conferences}
-                    feed={OtherFeed}
+                    feed={HybridFeed}
                 />
             </div>
         </section>
@@ -31,7 +31,7 @@ export async function getStaticProps() {
     return {
         props: {
             posts: await News.getPosts(),
-            conferences: await Conferences.getOtherConferences()
+            conferences: await Conferences.getConferences()
         }
     };
 }
