@@ -97,7 +97,7 @@ export default function SecretariatPage({ sec }) {
             <h1>Meet the Team</h1>
         </header>
 
-        {sec.map((rank, data, i) => {
+        {sec.map(([rank, data], i) => {
             return <div key={i}>
                 <Rank rank={rank} data={data} />
             </div>;
