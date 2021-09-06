@@ -11,4 +11,6 @@ export { default as CommitteeInfo} from './CommitteeInfo';
 export { default as Pill } from './Pill';
 export { Post, Markdown, Date } from './Post';
 
+export { default as Countdown } from './Countdown';
+
 export { StuyConference, OtherConference } from './ConferenceTypes';
