@@ -1,5 +1,5 @@
-import { Pill, Post, Link } from '../../components'
-import { News } from '../../lib/data';
+import { Pill, Post, Link } from '../../../components'
+import { News } from '../../../lib/data';
 import Head from 'next/head';
 
 export default function PostPage({ post }) {

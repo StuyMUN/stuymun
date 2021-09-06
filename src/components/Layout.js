@@ -14,7 +14,5 @@ export default function Layout({ children }) {
         <Navbar />
         
         {children}
-
-        {/* footer here */}
     </>;
 }

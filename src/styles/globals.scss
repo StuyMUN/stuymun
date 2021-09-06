@@ -14,11 +14,28 @@
 	--ff-body: 'Nunito', sans-serif;
 
     --bubble-radius: 5px;
+    --page-navigator-size: 20px;
 }
 * {
 	margin: 0;
 	box-sizing: border-box;
 }
+
+.__page-navigator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    div {
+        flex-basis: calc(100%/11);
+        font-size: var(--page-navigator-size);
+        width: calc(var(--page-navigator-size)*1.2);
+        height: calc(var(--page-navigator-size)*1.2);
+
+        text-align: center;
+        display: inline;
+    }
+}
+
 div#nav {
 	padding-bottom: 84.63px;
 	width: 100%;
@@ -28,7 +45,7 @@ div#nav {
 	-webkit-transition: top 0.2s;
 	transition: top 0.2s;
 	position: fixed;
-	height: 84.63px;
+	height: 84.63px; 
 	width: 100%;
 	z-index: 2;
 	background: var(--bg-color);

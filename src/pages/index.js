@@ -21,7 +21,9 @@ export default function HomePage({ posts, conferences, upcoming }) {
 
         <section className="content-container">
             <div className="content-split">
-                <NewsFeed posts={posts} />
+                <NewsFeed posts={posts}>
+                    <Link href={'/news'}>View more posts</Link>
+                </NewsFeed>
                 <ConferenceFeed
                     conferences={conferences}
                     feed={OtherFeed}
@@ -32,9 +34,10 @@ export default function HomePage({ posts, conferences, upcoming }) {
 }
 
 export async function getStaticProps() {
+
     return {
         props: {
-            posts: await News.getPosts(),
+            posts: await News.getPostsOnPage(1),
             conferences: await Conferences.getConferences(),
             upcoming: (await Conferences.getStuyConferences())[0]
         }

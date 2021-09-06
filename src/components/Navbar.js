@@ -25,7 +25,6 @@ function useScroll() {
             window.removeEventListener('scroll', handleScroll);
         }
     });
-
 }
 
 
