@@ -7,6 +7,7 @@ export { default as NextLink } from 'next/link';
 export { default as NewsFeed } from './News';
 export { ConferenceFeed, StuyFeed, OtherFeed, HybridFeed } from './Conferences';
 
+export { default as CommitteeInfo} from './CommitteeInfo';
 export { default as Pill } from './Pill';
 export { Post, Markdown, Date } from './Post';
 
