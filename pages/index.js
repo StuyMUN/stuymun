@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Conferences, News } from '../lib/data';
-import { NewsFeed, ConferenceFeed, Link, OtherFeed, HybridFeed } from '../components';
+import { NewsFeed, ConferenceFeed, Link, OtherFeed, HybridFeed, StuyFeed } from '../components';
 
 export default function HomePage({ posts, conferences }) {
     return <>
@@ -20,7 +20,7 @@ export default function HomePage({ posts, conferences }) {
                 <NewsFeed posts={posts} />
                 <ConferenceFeed
                     conferences={conferences}
-                    feed={HybridFeed}
+                    feed={OtherFeed}
                 />
             </div>
         </section>

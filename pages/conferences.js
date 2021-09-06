@@ -2,35 +2,40 @@ import Head from 'next/head';
 import React from "react";
 
 import { Conferences } from '../lib/data';
-
-import Link from 'next/link';
 import { ConferenceFeed, OtherFeed, Pill, StuyFeed } from '../components';
 
-export default function ConferencesPage({ stuy, other }) {
+export default function ConferencesPage({ conferences }) {
     return <>
         <Head>
             <title>Conferences | StuyMUN</title>
         </Head>
 
-        <Pill>
-            <ConferenceFeed title='Our Conferences' conferences={stuy} feed={StuyFeed} />
-        </Pill>
-
-        <div style={{height: '250px'}}></div> 
+        <header className="text-center">
+            <h1>Conferences</h1>
+        </header>
 
         <Pill>
-            <ConferenceFeed title='Upcoming Conferences' conferences={other} feed={OtherFeed} />
+            <ConferenceFeed
+                title='StuyMUN Conferences'
+                conferences={conferences}
+                feed={StuyFeed}
+            />
         </Pill>
 
-        <div><Link href='/'>Go to home</Link></div>
+        <Pill>
+            <ConferenceFeed
+                title='Visiting Conferences'
+                conferences={conferences}
+                feed={OtherFeed}
+            />
+        </Pill>
     </>;
 }
 
 export async function getStaticProps() {
     return {
         props: {
-            stuy: await Conferences.getStuyConferences(),
-            other: await Conferences.getOtherConferences()
+            conferences: await Conferences.getConferences(),
         }
     };
 }

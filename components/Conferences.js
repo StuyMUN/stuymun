@@ -2,11 +2,15 @@ import '../lib/object';
 import { OtherConference, StuyConference } from './ConferenceTypes';
 
 export const OtherFeed = (name, conference) => {
-    return <OtherConference name={name} conference={conference} />;
+    return conference.type == 'other' ?
+        <OtherConference name={name} conference={conference} /> :
+        null;
 };
 
 export const StuyFeed = (name, conference) => {
-    return <StuyConference name={name} conference={conference} hideCommittees />;
+    return conference.type == 'stuy' ?
+        <StuyConference name={name} conference={conference} hideCommittees /> :
+        null;
 };
 
 export const HybridFeed = (name, conference) => {

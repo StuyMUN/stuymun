@@ -3,13 +3,14 @@ import { Post } from './Post';
 import '../lib/object';
 import { isHttpLink } from '../lib/util';
 
-function CommitteePreview({ name, committee }) {
+function CommitteePreview({ name, slug, committee }) {
     return <>
-        <Link href={`/conference/${name}/${committee.name}`}>{committee.name}</Link>
+        <Link href={`/conference/${name}/${slug}`}>{committee.title}</Link>
     </>;
 }
 
 export function StuyConference({ name, conference, hideCommittees }) {
+    
     return <>
         <Post
             title={name}
@@ -18,9 +19,9 @@ export function StuyConference({ name, conference, hideCommittees }) {
             date={conference.details.date}
         />
         
-        {!hideCommittees && conference.committees.map((committee, i) => {
+        {!hideCommittees && conference.committees.map(([slug, committee], i) => {
             return <div key={i}>
-                <CommitteePreview name={name} committee={committee} />
+                <CommitteePreview name={name} slug={slug} committee={committee} />
             </div>;
         })}
     </>;
