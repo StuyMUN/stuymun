@@ -42,7 +42,7 @@ export function OtherConference({ name, conference }) {
             title={name}
             content={conference.content}
             date={conference.date}
-            url={`/conference/${name}`}
+            url={conference['website-link'] || `/conference/${name}`}
         />
         {getSignupLink(conference)}
     </>;
