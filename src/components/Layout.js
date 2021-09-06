@@ -12,6 +12,9 @@ export default function Layout({ children }) {
         </Head>
 
         <Navbar />
+        
         {children}
+
+        {/* footer here */}
     </>;
 }
