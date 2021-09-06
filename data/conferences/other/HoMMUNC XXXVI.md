@@ -6,7 +6,7 @@ date:
   day: 16
 
 # Links to relevant to conference?
-website-link: http://www.hommunc.org/
+website-link: https://www.hommunc.org/
 signup-link: TBA
 
 # Both the title and the url-slug are the name of the file
