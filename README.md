@@ -6,26 +6,23 @@ StuyMUN's official website developed with React and Next.js.
 
 ### high priority
 
-* sort conferences and news post by date (data.js, date.js)
-* clean conference backend/helper code (data.js)
-* limit the news post and conferences to a certain number (News/Conference Feed components)
-* Add stuy/mini munc counter, Finish Conferences page
-* finish secretariat page
-* individual conference page
+* clean Conference backend/helper code (data.js)
+* Limit the news post and conferences to a certain number (News/Conference Feed components)
+* Style Stuy/MiniMUNC counter + "learn more" button
+* Style individual Conference+Committee page
+* Mobile styling for smoked text (/conferences)
 
 ### medium priority
 
-* put both stuy and other conferences in the conference feed component (optional)
-* add word limit to news and conference descriptions
-* back buttons for post pages / conferences
-* improve code quality for date (date.js, Date component)
-* add footer to bottom
-* to top button?? (we also shouldnt have too much on page) (dont think we need)
+* Add character limit to news and conference descriptions
+* Navigation buttons for post pages + conferences + scrolled
+* Add footer to bottom  
+* Make links open in new tab (<https://stackoverflow.com/a/63627688>)
 
 ### low priority
 
-* add prettier and add production npm scripts
-* figure out next export (so we can use both vercel and gh pages)
-* figure out github version tagging for production scripts
-* figure out image optimizations
-* finish data author (for fun tests)
+* Add prettier and add production npm scripts
+* Figure out next export (so we can use both vercel and gh pages)
+* Figure out github version tagging for production scripts
+* Figure out image optimizations
+* Finish data author (for fun tests)
