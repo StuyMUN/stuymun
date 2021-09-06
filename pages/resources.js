@@ -16,9 +16,9 @@ export default function ResourcesPage() {
         width="160px" height="160px"
     />
 
-    return <section>
+    return <>
 
-        <header className="resources text-center">
+        <header className="text-center">
             <h1>Resources</h1>
         </header>
 
@@ -36,5 +36,5 @@ export default function ResourcesPage() {
             </div>
         </Pill>
 
-    </section>;
+    </>;
 }
