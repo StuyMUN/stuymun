@@ -10,14 +10,12 @@ StuyMUN's official website developed with React and Next.js.
 * Limit the news post and conferences to a certain number (News/Conference Feed components)
 * Style Stuy/MiniMUNC counter + "learn more" button
 * Style individual Conference+Committee page
-* Mobile styling for smoked text (/conferences)
 
 ### medium priority
 
 * Add character limit to news and conference descriptions
 * Navigation buttons for post pages + conferences + scrolled
-* Add footer to bottom  
-* Make links open in new tab (<https://stackoverflow.com/a/63627688>)
+* Make links open in new tab
 
 ### low priority
 
