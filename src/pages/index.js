@@ -12,9 +12,9 @@ export default function HomePage({ posts, conferences, upcoming }) {
         {upcoming && isDateUpcoming(upcoming[1].details.date) && <header>
             <div className="text-center">
                 <Pill>
-                    <h1>Countdown To {upcoming[0]}</h1>
+                    <h1 className="countdown-title">{upcoming[0]}</h1>
                     <Countdown date={upcoming[1].details.date} />
-                    <Link href="/conference/MiniMUNC%202021"><button>Learn More</button></Link>
+                    <Link href={`/conference/${upcoming[0]}`}><button>Learn More</button></Link>
                 </Pill>
             </div>
         </header>}
@@ -22,7 +22,7 @@ export default function HomePage({ posts, conferences, upcoming }) {
         <section className="content-container">
             <div className="content-split">
                 <NewsFeed posts={posts}>
-                    <Link href={'/news'}>View more posts</Link>
+                    <Link href={'/news'}>View all posts</Link>
                 </NewsFeed>
                 <ConferenceFeed
                     conferences={conferences}
@@ -35,9 +35,11 @@ export default function HomePage({ posts, conferences, upcoming }) {
 
 export async function getStaticProps() {
 
+    const posts = 3;
+
     return {
         props: {
-            posts: await News.getPostsOnPage(1),
+            posts: (await News.getPosts()).slice(0, posts),
             conferences: await Conferences.getConferences(),
             upcoming: (await Conferences.getStuyConferences())[0]
         }

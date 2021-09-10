@@ -1,42 +1,48 @@
 import { useEffect, useState } from 'react';
-import { getDateObject, getTimeDifference } from '../lib/date';
+import { getDateObject } from '../lib/date';
 
-function leadingZero(n) {
-    if (n < 10)
-        return '0' + n;
-    return n;
+function getTimeState(date) {
+    let seconds = (getDateObject(date).getTime() - Date.now()) / 1000.0,
+        minutes = seconds / 60,
+        hours = minutes / 60,
+        days = hours / 24;
+
+    return {
+        seconds: Math.floor(seconds) % 60,
+        minutes: Math.floor(minutes) % 60,
+        hours: Math.floor(hours) % 24,
+        days: Math.floor(days)
+    };
 }
 
-export default function Countdown({ date }) {
-    const [time, setTime] = useState(null);
+function useCountdown(date) {
+    const [time, setTime] = useState(getTimeState(date));
 
     useEffect(() => {
         let timer = setInterval(() => {
-            let seconds = (getDateObject(date).getTime() - Date.now()) / 1000.0,
-                minutes = seconds / 60,
-                hours = minutes / 60,
-                days = hours / 24;
-
-            setTime({
-                seconds: Math.floor(seconds) % 60,
-                minutes: Math.floor(minutes) % 60,
-                hours: Math.floor(hours) % 24,
-                days: Math.floor(days),
-            });
+            setTime(getTimeState(date));
         }, 1000);
 
         return () => clearInterval(timer);
     }, [time, date]);
 
-    if (time === null) {
-        return null;
-    }
+    return time;
+}
 
-    const { days, hours, minutes, seconds } = time;
-    return <p>
-        {days}:
-        {leadingZero(hours)}:
-        {leadingZero(minutes)}:
-        {leadingZero(seconds)}
+function timed(text, value) {
+    if (value !== 1) {
+        text += 's';
+    }
+    return `${value} ${text} `;
+}
+
+export default function Countdown({ date }) {
+    const { days, hours, minutes, seconds } = useCountdown(date);
+
+    return <p className="timer">
+        {timed('day', days)}
+        {timed('hour', hours)}
+        {timed('minute', minutes)}
+        {timed('second', seconds)}
     </p>;
 }

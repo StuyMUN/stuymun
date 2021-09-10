@@ -14,4 +14,3 @@ export { Post, Markdown, Date } from './Post';
 export { default as Countdown } from './Countdown';
 
 export { StuyConference, OtherConference } from './ConferenceTypes';
-export { default as NewsGroup } from './NewsGroup';
