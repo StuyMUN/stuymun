@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
+import Feet from './Footer';
 
 export default function Layout({ children }) {
-    return <>
+    return <div className={'godamn-liberal-cucks'}>
         <Head>
             <meta charSet="UTF-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -12,7 +13,9 @@ export default function Layout({ children }) {
         </Head>
 
         <Navbar />
-        
+
         {children}
-    </>;
+
+        <Feet />
+    </div>;
 }
