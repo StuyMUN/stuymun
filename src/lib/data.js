@@ -189,22 +189,4 @@ export class News {
         return (await News.getPostMap())[slug];
     }
 
-    static POSTS_PER_PAGE = Number(process.env.POSTS_PER_PAGE || 3);
-
-    static async getPageCount() {
-        const posts = await News.getPosts();
-        return Math.ceil(posts.length / News.POSTS_PER_PAGE);
-    }
-
-    static async getPostsOnPage(page) {
-        --page;
-        let posts = await News.getPosts();
-
-        return posts.slice(
-            News.POSTS_PER_PAGE * page,
-            Math.min(posts.length, News.POSTS_PER_PAGE * (page + 1))
-        );
-
-    }
-
 }
