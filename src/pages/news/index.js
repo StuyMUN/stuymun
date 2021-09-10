@@ -1,11 +1,11 @@
 import { NewsFeed, Pill } from "../../components";
 import Head from 'next/head';
-// import { News } from "../../lib/data";
+import { News } from "../../lib/data";
 
 export default function NewsGroupFirstPage({ posts }) {
     return <>
         <Head>
-            <title>News Page {props.page} | StuyMUN</title>
+            <title>News Page | StuyMUN</title>
         </Head>
 
         <Pill>

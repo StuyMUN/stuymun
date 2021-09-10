@@ -98,5 +98,3 @@ export const ParserDatabase = [
         return { content: html };
     })
 ];
-
-// (async () => console.log(await ParserDatabase[0].parseFile('/home/mlyes3/Programming/Node/stuymun/data/conferences/stuy/MiniMUNC 2021/committees.json')))();

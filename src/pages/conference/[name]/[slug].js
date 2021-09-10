@@ -1,5 +1,4 @@
 import { Pill, Link, CommitteeInfo } from '../../../components'
-import { isHttpLink } from '../../../lib/util';
 import { Conferences } from '../../../lib/data';
 import Head from 'next/head';
 
@@ -20,7 +19,6 @@ export default function CommitteePage({ conference, committee }) {
 }
 
 export async function getStaticProps({ params }) {
-    console.log(params);
     let committees = (await Conferences.getStuyConference(params.name)).committees;
     let committee = committees[params.slug];
 

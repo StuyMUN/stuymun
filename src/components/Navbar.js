@@ -53,6 +53,7 @@ export default function Navbar({ }) {
                 <Link href={"/secretariat"}><div className="link-txt">Secretariat</div></Link>
                 <Link href={"/about"}><div className="link-txt">About</div></Link>
             </nav>
+            
             <nav className="mobile-nav" role="navigation">
                 <div id="menuToggle">
                     <input type="checkbox" />
