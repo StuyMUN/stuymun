@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Conferences, News } from '../lib/data';
-import { NewsFeed, ConferenceFeed, Link, OtherFeed, Pill, Countdown } from '../components';
+import { NewsFeed, ConferenceFeed, Link, Pill, Countdown, HybridFeed } from '../components';
 import { isDateUpcoming } from '../lib/date';
 
 export default function HomePage({ posts, conferences, upcoming }) {
@@ -26,8 +26,10 @@ export default function HomePage({ posts, conferences, upcoming }) {
                 </NewsFeed>
                 <ConferenceFeed
                     conferences={conferences}
-                    feed={OtherFeed}
-                />
+                    feed={HybridFeed}
+                >
+                    <Link href={'/conferences'}>View all conferences</Link> 
+                </ConferenceFeed>
             </div>
         </section>
     </>;
@@ -35,12 +37,13 @@ export default function HomePage({ posts, conferences, upcoming }) {
 
 export async function getStaticProps() {
 
-    const posts = 3;
+    const newsPosts = 5;
+    const conferencePosts = 3;
 
     return {
         props: {
-            posts: (await News.getPosts()).slice(0, posts),
-            conferences: await Conferences.getConferences(),
+            posts: (await News.getPosts()).slice(0, newsPosts),
+            conferences: (await Conferences.getConferences()).slice(0, conferencePosts),
             upcoming: (await Conferences.getStuyConferences())[0]
         }
     };

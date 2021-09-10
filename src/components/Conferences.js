@@ -22,7 +22,7 @@ export const HybridFeed = (name, conference) => {
     }
 }
 
-export function ConferenceFeed({ conferences, title, feed }) {
+export function ConferenceFeed({ children, conferences, title, feed }) {
 
     function getConference([name, conference], i) {
         return <div key={i}>
@@ -33,5 +33,6 @@ export function ConferenceFeed({ conferences, title, feed }) {
     return <section className="upcoming">
         <h2 className={"text-center conference-h2"} id={title ? 'conference-h2' : 'upcoming-h2'}>{title || 'Upcoming'}</h2>
         {conferences.map(getConference)}
+        {children}
     </section>;
 }
