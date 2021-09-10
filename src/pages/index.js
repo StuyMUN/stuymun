@@ -28,7 +28,7 @@ export default function HomePage({ posts, conferences, upcoming }) {
                     conferences={conferences}
                     feed={HybridFeed}
                 >
-                    <Link href={'/conferences'}>View all conferences</Link> 
+                    <Link href={'/conferences'}>View all conferences</Link>
                 </ConferenceFeed>
             </div>
         </section>
