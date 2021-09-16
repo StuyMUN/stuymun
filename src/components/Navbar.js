@@ -34,7 +34,7 @@ export default function Navbar({ }) {
     // eslint-disable-next-line @next/next/no-img-element
     const FilledImage = <img
         alt="MUNLOGO"
-        src="/img/munlogo-transparent.png"
+        src="./static/img/munlogo-transparent.png"
         width="80px" height="70px"
     />;
 
