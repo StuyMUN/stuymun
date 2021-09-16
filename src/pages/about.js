@@ -1,11 +1,10 @@
-import { Site } from '../lib/data';
 import Head from 'next/head';
 import Link from '../components/Link';
-import { Pill, Markdown } from '../components';
+import { Pill } from '../components';
 import getImg from '../lib/constants';
 
 
-export default function AboutPage({ about }) {
+export default function AboutPage( ) {
     return <>
         <Head>
             <title>About | StuyMUN</title>
