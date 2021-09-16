@@ -32,6 +32,7 @@ export default function AboutPage( ) {
         <div align="center">
             <h2>Conclusion</h2>
         <div>Sussus Amogus</div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={getImg("/img/sus.jpg")} alt="sussy" /></div>
             <Link href={'/'}>Go back home</Link>
         </Pill>
