@@ -4,14 +4,14 @@ export default function ResourcesPage() {
 
     // eslint-disable-next-line @next/next/no-img-element
     const DriveImage = <img
-        src="./static/img/drive.png"
+        src="/static/img/drive.png"
         alt="Google Drive Logo"
         width="160px" height="143.7px"
     />;
 
     // eslint-disable-next-line @next/next/no-img-element
     const FormImage = <img
-        src="./static/img/form.png"
+        src="/static/img/form.png"
         alt="Form Image"
         width="160px" height="160px"
     />
