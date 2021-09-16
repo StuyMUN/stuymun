@@ -22,7 +22,7 @@ export default function AboutPage( ) {
         <div>
             <p>The Stuyvesant Model United Nations team, commonly called StuyMUN, is made up of students from Stuyvesant High
                 School in New York, NY. Members are trained to be well equipped for collegiate competitions in some of the
-                nation's most prestigious institutions. The team regularly brings home awards, and is ranked amongst the top 15
+                nation&apos;s most prestigious institutions. The team regularly brings home awards, and is ranked amongst the top 15
                 teams in the nation by Best Delegate.</p>
         </div>
 
