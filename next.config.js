@@ -9,7 +9,7 @@ module.exports = {
     assetPrefix: !debug ? '/stuymun-fork' : '',
     images: {
       loader: "imgix",
-      path: "/static/img",
+      path: "",
     },
     trailingSlash: true,
     reactStrictMode: true,

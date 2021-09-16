@@ -1,17 +1,18 @@
 import { Pill } from "../components";
+import getImg from "../lib/constants";
 
 export default function ResourcesPage() {
 
     // eslint-disable-next-line @next/next/no-img-element
     const DriveImage = <img
-        src="../static/img/drive.png"
+        src={getImg("/img/drive.png")}
         alt="Google Drive Logo"
         width="160px" height="143.7px"
     />;
 
     // eslint-disable-next-line @next/next/no-img-element
     const FormImage = <img
-        src="../static/img/form.png"
+        src={getImg("/img/form.png")}
         alt="Form Image"
         width="160px" height="160px"
     />
