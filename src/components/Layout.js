@@ -4,7 +4,7 @@ import Feet from './Footer';
 import getImg from "../lib/constants";
 
 export default function Layout({ children }) {
-    return <div className={'godamn-liberal-cucks'} style={{backgroundImage: `url(${getImg("/img/UN-blur-01.png")})`}}>
+    return <div className={'proot'} style={{backgroundImage: `url(${getImg("/img/UN-blur-01.png")})`}}>
         <Head>
             <meta charSet="UTF-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
