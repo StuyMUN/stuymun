@@ -253,9 +253,11 @@ body {
 	color: black;
 	height: 100%;
 }
-html {
+.godamn-liberal-cucks {
 	overflow-x: hidden;
-	background: var(--bg) no-repeat center center fixed;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -263,8 +265,10 @@ html {
 	height: 100%;
 }
 @media (max-width: 830px) {
-	html {
-		background: var(--bg) no-repeat center center fixed;
+	.godamn-liberal-cucks {
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;

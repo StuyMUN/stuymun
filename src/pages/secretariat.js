@@ -1,14 +1,15 @@
 import { Site } from '../lib/data';
 import Head from 'next/head';
+import getImg from '../lib/constants';
 
 function Person({ person }) {
 
     let pfp = null;
     if (person.pfp) {
         // eslint-disable-next-line @next/next/no-img-element
-        pfp = <img src={person.pfp} width="200px" height="200px" alt={`${person.name}'s personal picture`} />;
+        pfp = <img src={getImg(person.pfp)} width="200px" height="200px" alt={`${person.name}'s personal picture`} />;
     }
-
+    
     return <>
         {pfp}
         <p>{person.name}</p>

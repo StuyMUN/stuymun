@@ -1,6 +1,7 @@
 // import Image from 'next/image';
 import { useState, useEffect } from "react";
 import Link from './Link';
+import getImg from "../lib/constants";
 
 function useScroll() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -34,7 +35,7 @@ export default function Navbar({ }) {
     // eslint-disable-next-line @next/next/no-img-element
     const FilledImage = <img
         alt="MUNLOGO"
-        src="/img/munlogo-transparent.png"
+        src={getImg("/img/munlogo-transparent.png")}
         width="80px" height="70px"
     />;
 
