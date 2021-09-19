@@ -214,6 +214,10 @@ h3 {
 		padding-top: 4rem;
 	}
 }
+.btn {
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
 header {
 	h1, h2, h3 {
 		letter-spacing: 1px;
@@ -355,6 +359,13 @@ section {
 	}
 }
 @media (max-width: 830px) {
+	.nav-container {
+		display: none;
+	}
+	.mobile-nav-container {
+		z-index: 100;
+		position: fixed;
+	}
 	#main-nav {
 		display: none;
 	}
@@ -374,7 +385,10 @@ section {
 			}
 			display: inline-block;
 		}
+		z-index: 101;
 		display: inline-block;
+		position: fixed;
+
 	}
 	div#special.link-txt {
 		margin-bottom: 0.7rem;
@@ -472,7 +486,7 @@ section {
 	margin-left: -20px;
 	position: absolute;
 	width: 100vw;
-	height: 49em;
+	height: 100vh;
 	padding: 50px;
 	
 	background: #ededed;
@@ -587,21 +601,43 @@ section {
 	}
 }
 footer {
+	.fbimg {
+		position: relative;
+		bottom: -6px;
+	}
+	.stuyactimg {
+		position: relative;
+		bottom: -10px;
+	}
 	a {
 		color: rgb(255, 236, 239);
 		text-decoration: underline;
 	}
 	background: rgba(0, 0, 0, 0.4);
 	color: white;
-	padding-block: 2rem;
+	padding-block: 1rem;
 	position: absolute;
 	margin-top: 100px;
 	bottom: 0;
 	width: 100%; 
 }
+.vertline {
+	display: inline;
+	font-size: 30px;
+}
 @media (max-width: 500px) {
 	footer {
-		font-size: 16px;
+		.fbimg {
+			width: 24px;
+			height: 24px;
+			bottom: -4px;
+		}
+		.stuyactimg {
+			width: 28px;
+			height: 28px;
+			bottom: -8px;
+		}
+		font-size: 14px;
 	}
 }
 .timer {
