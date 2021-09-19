@@ -6,21 +6,18 @@ StuyMUN's official website developed with Next.js.
 
 ### high priority
 
-* clean Conference backend/helper code (data.js)
-* Limit the news post and conferences to a certain number (News/Conference Feed components)
 * Style Stuy/MiniMUNC counter + "learn more" button
 * Style individual Conference+Committee page
+* Navigation buttons for post pages + conferences + scrolled
 
 ### medium priority
 
-* Add character limit to news and conference descriptions
-* Navigation buttons for post pages + conferences + scrolled
+* Add character limit to news, conference, committee descriptions
 * Make links open in new tab
 
 ### low priority
 
-* Add prettier and add production npm scripts
-* Figure out next export (so we can use both vercel and gh pages)
-* Figure out github version tagging for production scripts
-* Figure out image optimizations
+* Add prettier
 * Finish data author (for fun tests)
+* clean Conference backend/helper code (data.js)
+* Limit the news post and conferences to a certain number (News/Conference Feed components)
