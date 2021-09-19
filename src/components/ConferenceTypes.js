@@ -3,9 +3,14 @@ import { Post } from './Post';
 import '../lib/object';
 import { isHttpLink } from '../lib/util';
 
+function Markdown({ content }) {
+    return <div className={'__markdown'} dangerouslySetInnerHTML={{ __html: content }} />
+}
+
 function CommitteePreview({ name, slug, committee }) {
     return <>
-        <Link href={`/conference/${name}/${slug}`}>{committee.title}</Link>
+        <h2><Link href={`/conference/${name}/${slug}`}>{committee.title}</Link></h2>
+        {committee.content && <Markdown content={committee.content} />}
     </>;
 }
 
@@ -31,7 +36,7 @@ export function OtherConference({ name, conference }) {
     function getSignupLink(conference) {
         const link = conference['signup-link'];
         if (isHttpLink(link)) {
-            return <Link href={link}>Signup to the Conference!</Link>;
+            return <a href={link} target="_blank" rel="noreferrer">Signup to the Conference!</a>;
         } else {
             return <p>Signups opening soon!</p>;
         }
