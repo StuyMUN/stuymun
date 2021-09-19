@@ -21,7 +21,7 @@ export default function ResourcesPage() {
     return <>
 
         <Head>
-            <title>Resurces | StuyMUN</title>    
+            <title>Resources | StuyMUN</title>    
         </Head>
 
         <header className="text-center">
