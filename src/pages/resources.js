@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Pill } from "../components";
 import getImg from "../lib/constants";
 
@@ -18,6 +19,10 @@ export default function ResourcesPage() {
     />
 
     return <>
+
+        <Head>
+            <title>Resurces | StuyMUN</title>    
+        </Head>
 
         <header className="text-center">
             <h1>Resources</h1>

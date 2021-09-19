@@ -14,7 +14,7 @@ export default function HomePage({ posts, conferences, upcoming }) {
                 <Pill>
                     <h1 className="countdown-title">{upcoming[0]}</h1>
                     <Countdown date={upcoming[1].details.date} />
-                    <Link href={`/conference/${upcoming[0]}`}><button>Learn More</button></Link>
+                    <Link href={`/conference/${upcoming[0]}`}><button className="btn">Learn More</button></Link>
                 </Pill>
             </div>
         </header>}

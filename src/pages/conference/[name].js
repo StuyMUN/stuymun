@@ -26,6 +26,7 @@ export default function ConferencePage({ name, conference }) {
         <section>
             <div className="container bg-light-200">
                 {getConferenceComponent(conference)}
+                <br/><hr/>
                 <div><Link href={'/conferences/'}>Go Back to Conferences</Link></div>
                 <div><Link href={'/'}>Go Back Home</Link></div>
             </div>
