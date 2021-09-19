@@ -11,11 +11,9 @@ function useScroll() {
             let currScrollPos = window.pageYOffset;
             if (scrollPosition > currScrollPos) {
                 document.getElementById("main-nav").style.top = "0px";
-                document.getElementsByClassName("mobile-nav")[0].style.top = "0px";
                 document.getElementsByClassName("nav-container")[0].style.top = "0px";
             } else {
                 document.getElementById("main-nav").style.top = "-84.63px";
-                document.getElementsByClassName("mobile-nav")[0].style.top = "-84.63px";
                 document.getElementsByClassName("nav-container")[0].style.top = "-84.63px";
             }
             setScrollPosition(currScrollPos);
@@ -31,6 +29,16 @@ function useScroll() {
 
 export default function Navbar({ }) {
     useScroll();
+
+    /* an alternative to this is using useRouter() in this component
+    and having a useEffect that changes on router.pathname and not having
+    onClick on each link -- this triggers more reloads in development
+    but it should be the same in SSG production  */
+    
+    // mobile nav options
+    const [checked, setChecked] = useState(false);
+    const toggle = _e => setChecked(!checked);
+    const disable = _e => setChecked(false);
 
     // eslint-disable-next-line @next/next/no-img-element
     const FilledImage = <img
@@ -54,18 +62,21 @@ export default function Navbar({ }) {
                 <Link href={"/secretariat"}><div className="link-txt">Secretariat</div></Link>
                 <Link href={"/about"}><div className="link-txt">About</div></Link>
             </nav>
-            
+        </div>
+
+        <div className="mobile-nav-container">
             <nav className="mobile-nav" role="navigation">
                 <div id="menuToggle">
-                    <input type="checkbox" />
+                    <input type="checkbox" onChange={toggle} checked={checked} />
                     <span></span>
                     <span></span>
                     <span></span>
                     <ul id="menu">
-                        <Link href={"/resources"}><li>Resources</li></Link>
-                        <Link href={"/conferences"}><li>Conferences</li></Link>
-                        <Link href={"/secretariat"}><li>Secretariat</li></Link>
-                        <Link href={"/about"}><li>About</li></Link>
+                        <Link href={"/"}><li onClick={disable}>Home</li></Link>
+                        <Link href={"/resources"}><li onClick={disable}>Resources</li></Link>
+                        <Link href={"/conferences"}><li onClick={disable}>Conferences</li></Link>
+                        <Link href={"/secretariat"}><li onClick={disable}>Secretariat</li></Link>
+                        <Link href={"/about"}><li onClick={disable}>About</li></Link>
                     </ul>
                 </div>
                 <div className="nav-title-m" id="nav-m">
@@ -75,5 +86,5 @@ export default function Navbar({ }) {
             </nav>
         </div>
 
-    </div>;
+    </div >;
 }
