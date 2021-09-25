@@ -1,17 +1,18 @@
 import Link from './Link';
-import { Post } from './Post';
+import { Post, Markdown } from './Post';
 import '../lib/object';
 import { isHttpLink } from '../lib/util';
 
-function Markdown({ content }) {
-    return <div className={'__markdown'} dangerouslySetInnerHTML={{ __html: content }} />
-}
+const MAX_CHARS = 256;
 
 function CommitteePreview({ name, slug, committee }) {
-    return <>
-        <h2><Link href={`/conference/${name}/${slug}`}>{committee.title}</Link></h2>
-        {committee.content && <Markdown content={committee.content} />}
-    </>;
+    const preview = committee.content.substring(0, MAX_CHARS) + '...';
+    const committeeLink = `/conference/${name}/${slug}`;
+
+    return <div className="committee-preview">
+        <h3><Link href={committeeLink}>{committee.title}</Link></h3>
+        <Markdown content={preview} />
+    </div>;
 }
 
 export function StuyConference({ name, conference, hideCommittees }) {

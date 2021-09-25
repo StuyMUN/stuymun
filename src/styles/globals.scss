@@ -625,6 +625,13 @@ footer {
 	display: inline;
 	font-size: 30px;
 }
+
+.committee-preview {
+    .__markdown {
+        font-style: italic;
+        color: rgb(64, 64, 64);
+    }
+}
 @media (max-width: 500px) {
 	footer {
 		.fbimg {
