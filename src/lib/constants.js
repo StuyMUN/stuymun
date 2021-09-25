@@ -1,5 +1,6 @@
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+// const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function getImg( rawpath ) {
-    return prefix + rawpath
+    return rawpath
+    // return prefix + rawpath
 }
