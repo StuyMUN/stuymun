@@ -22,11 +22,11 @@ export default function ConferencePage({ name, conference }) {
         <Head>
             <title>{name} | StuyMUN</title>
         </Head>
-
+        <header className="spacer">&nbsp;</header>
         <section>
             <div className="container bg-light-200">
                 {getConferenceComponent(conference)}
-                <br/><hr/>
+                <br/><hr className="line" /><br />
                 <div><Link href={'/conferences/'}>Go Back to Conferences</Link></div>
                 <div><Link href={'/'}>Go Back Home</Link></div>
             </div>

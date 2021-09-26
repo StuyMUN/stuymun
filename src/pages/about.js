@@ -15,7 +15,7 @@ export default function AboutPage() {
         </header>
 
         <Pill>
-            <div align="center">
+            <div className="smokey-about-txt" align="center">
                 <h1>Venimus, Vidimus, Gavelimus</h1>
             </div><br />
 

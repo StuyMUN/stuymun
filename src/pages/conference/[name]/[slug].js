@@ -11,10 +11,11 @@ export default function CommitteePage({ conference, committee }) {
         <Head>
             <title>{title} | StuyMUN</title>
         </Head>
-        <Pill>
+        <header className="spacer">&nbsp;</header>
+        <section><Pill>
         <CommitteeInfo committee={committee}/>
         <div><Link href={`/conference/${conference}`}>Go back to conference</Link></div>
-        </Pill>
+        </Pill></section>
     </>;
 }
 

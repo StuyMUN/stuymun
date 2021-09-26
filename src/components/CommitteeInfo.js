@@ -19,12 +19,12 @@ export default function CommitteeInfo({ committee }) {
     const { title, chair, codirector, content, bglink } = committee;
 
     return <>
-        <h2>{title}</h2>
-        <i>Chair: {chair}</i><br />
-        <i>Co-Director: {codirector}</i><br />
+        <h2 className="h2-title">{title}</h2>
+        <i className="chairs">Chair: {chair}</i><br />
+        <i className="chairs">Co-Director: {codirector}</i><br />
         {content && <Markdown content={content} />}
         {getBGLink(bglink)}<br />
-        <hr />
+        <hr className="line" />
         <br />
     </>;
 }
