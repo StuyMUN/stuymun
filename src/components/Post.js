@@ -14,7 +14,10 @@ export function Date({ date }) {
     const now = getNow();
     const dv = 86400000;
     const secondsDiff = getTimeDifference(date, now);
-    if (secondsDiff > 0) {
+    if (secondsDiff == 0) {
+        countdown = ``;
+    }
+    else if (secondsDiff > 0) {
         countdown = ` | ${Math.floor(secondsDiff/dv)}d until`;
     } else {
         countdown = ` | ${Math.floor(Math.abs(secondsDiff)/dv)}d ago`
