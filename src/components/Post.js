@@ -27,20 +27,25 @@ export function Date({ date }) {
 
 export function Post({ title, content, date, url }) {
 
-    // look away (update this if block)
-    let titleComponent = null;
-    if (title && url) {
-        titleComponent = <h3 className={'post-title'}><Link href={url}>{title}</Link></h3>;
+    let tc = null;
+
+    // if url,
+    if (url) {
+        let text = title ? <>{title}</> : <>See More</>;
+        let getLink = url.startsWith('http') ? 
+            e => <a href={url} target="_blank" rel="noreferrer">{e}</a> :
+            e => <Link href={url}>{e}</Link>;
+        
+        tc = getLink(text);
     }
-    else if (title) {
-        titleComponent = <h3 className={'post-title'}>{title}</h3>;
-    }
-    else {
-        titleComponent = <h3 className={'post-title'}><Link href={url}>See More</Link></h3>
+
+    // if no url,
+    else  {
+        tc = <>{title}</>;
     }
 
     return <>
-        {titleComponent}
+        {<h3 className='post-title'>{tc}</h3>}
         {date && <Date date={date} />}
         {content && <Markdown content={content} />}
     </>;
