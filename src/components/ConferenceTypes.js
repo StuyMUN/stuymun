@@ -3,10 +3,11 @@ import { Post, Markdown } from './Post';
 import '../lib/object';
 import { isHttpLink } from '../lib/util';
 
-const MAX_CHARS = 256;
+const MAX_CHARS = 1024;
 
 function CommitteePreview({ name, slug, committee }) {
-    const preview = committee.content.substring(0, MAX_CHARS) + '...';
+    let preview = committee.content.substring(0, MAX_CHARS);
+    if (preview.length == MAX_CHARS) preview += '...';
     const committeeLink = `/conference/${name}/${slug}`;
 
     return <div className="committee-preview">
@@ -17,6 +18,21 @@ function CommitteePreview({ name, slug, committee }) {
 
 export function StuyConference({ name, conference, hideCommittees }) {
     
+    function getCommittees(conference) {
+        // flatten the committees into an array
+        let committees = conference.committees.map(
+            ([slug, committee], _i) => {
+                return [ slug, committee ];
+            }
+        );
+
+        committees.sort((a, b) => {
+            return a[1].ordering - b[1].ordering;
+        });
+
+        return committees;
+    }
+
     return <>
         <Post
             title={name}
@@ -24,8 +40,8 @@ export function StuyConference({ name, conference, hideCommittees }) {
             url={`/conference/${name}`}
             date={conference.details.date}
         />
-        
-        {!hideCommittees && conference.committees.map(([slug, committee], i) => {
+    
+        {!hideCommittees && getCommittees(conference).map(([slug, committee], i) => {
             return <div key={i}>
                 <CommitteePreview name={name} slug={slug} committee={committee} />
             </div>;
