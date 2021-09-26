@@ -6,13 +6,13 @@ StuyMUN's official website developed with Next.js.
 
 ### high priority
 
-* news post
-* secretariat page
+* ...
 
 ### medium priority
 
 * document code & code review
 * limit number of posts at a time for news post / conference sections
+* committee look on conference page
 
 ### low priority
 
