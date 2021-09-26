@@ -8,16 +8,17 @@ export default function PostPage({ post }) {
             <title>{post.title} | StuyMUN</title>
         </Head>
 
-        <Pill>
+        <header className="spacer">&nbsp;</header>
+        <section><Pill>
             <Post
                 title={post.title}
                 content={post.content}
                 date={post.date}
             />
-
+            <br/><hr className="line" /><br />
             <div><Link href={'/'}>Go Back Home</Link></div>
             <div><Link href={'/news'}>Go To News Posts</Link></div>
-        </Pill>
+        </Pill></section>
     </>;
 }
 

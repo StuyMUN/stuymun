@@ -45,7 +45,7 @@ export function Post({ title, content, date, url }) {
     }
 
     return <>
-        {<h3 className='post-title'>{tc}</h3>}
+        {<h3 className='h2-title post-title'>{tc}</h3>}
         {date && <Date date={date} />}
         {content && <Markdown content={content} />}
     </>;
