@@ -6,18 +6,15 @@ StuyMUN's official website developed with Next.js.
 
 ### high priority
 
-* Style Stuy/MiniMUNC counter + "learn more" button
-* Style individual Conference+Committee page
-* Navigation buttons for post pages + conferences + scrolled
+* news post
+* secretariat page
 
 ### medium priority
 
-* Add character limit to news, conference, committee descriptions
-* Make links open in new tab
+* document code & code review
+* limit number of posts at a time for news post / conference sections
 
 ### low priority
 
-* Add prettier
+* Add prettier for code
 * Finish data author (for fun tests)
-* clean Conference backend/helper code (data.js)
-* Limit the news post and conferences to a certain number (News/Conference Feed components)
