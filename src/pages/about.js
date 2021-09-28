@@ -28,9 +28,6 @@ export default function AboutPage() {
 
             <div>Every April, the team also hosts its own conference, the Stuyvesant Model United Nations Conference, which attracts
                 delegates from around the New York area.</div><br />
-
-            <div align="center">
-                <h2>Conclusion</h2>
             <Link href={'/'}>Go back home</Link>
         </Pill>
     </>
