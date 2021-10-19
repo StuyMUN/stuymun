@@ -2,7 +2,7 @@
 title: "ECOSOC: Right of Work"
 chair: Neve Diaz Carr
 codirector: Aaron Hui
-bglink: ""
+bglink: "https://www.stuymun.org/docs/ecosoc.pdf"
 
 ordering: 1
 ---

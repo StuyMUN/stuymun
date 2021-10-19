@@ -2,7 +2,7 @@
 title: "England 1066: William the Conqueror’s Court"
 chair: Justin Murdock
 codirector: Emma Yuditsky and Lianne Ohayon
-bglink: ""
+bglink: "https://www.stuymun.org/docs/england.pdf"
 
 ordering: 5
 ---

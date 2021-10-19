@@ -2,7 +2,7 @@
 title: "Occupation of Cyprus"
 chair: Ian Graham Martinez
 codirector: Jerry Yang
-bglink: ""
+bglink: "https://www.stuymun.org/docs/cyprus.pdf"
 
 ordering: 4
 ---
