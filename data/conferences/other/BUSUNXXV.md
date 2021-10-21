@@ -13,5 +13,4 @@ signup-link: TBA
 # so there's no title here
 ---
 
-Hey guys! I feel SO sorry for those of you who have to abbreviate tweets because you only have 140 characters. Soooooooo lame! 
-Anyway, what's everyone doing today? I'm just type-type-typing away! SO many characters! Talk to you soon.
+the Brown Model United Nations conference (BUSUNXXV) is the Twenty-Fifth Annual Session of the Brown University Simulation of the United Nations. It will be held from November 5-7, 2021. 
