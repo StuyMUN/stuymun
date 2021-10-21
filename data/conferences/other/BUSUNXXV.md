@@ -13,4 +13,4 @@ signup-link: TBA
 # so there's no title here
 ---
 
-the Brown Model United Nations conference (BUSUNXXV) is the Twenty-Fifth Annual Session of the Brown University Simulation of the United Nations. It will be held from November 5-7, 2021. 
+The Brown Model United Nations conference (BUSUNXXV) is the Twenty-Fifth Annual Session of the Brown University Simulation of the United Nations. It will be held from November 5-7, 2021. 
