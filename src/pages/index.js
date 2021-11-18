@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Conferences, News } from '../lib/data';
-import { NewsFeed, ConferenceFeed, Link, Pill, Countdown, HybridFeed } from '../components';
+import { NewsFeed, ConferenceFeed, Link, Pill, Countdown, OtherFeed } from '../components';
 import { isDateUpcoming } from '../lib/date';
 
 export default function HomePage({ posts, conferences, upcoming }) {
