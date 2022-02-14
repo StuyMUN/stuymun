@@ -1,6 +1,6 @@
 ---
 title: "Jewish Gangsters"
-chair: River Yuditsky
+chair: Sophia Yuditsky
 codirector: Lina Khamze and Andrey Sokolov
 bglink: ""
 ordering: 8
