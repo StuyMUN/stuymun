@@ -3,6 +3,7 @@ title: "Historical Committee: US Senate 1832 Nullification Crisis"
 chair: Aaron Hui
 codirector: Andrew Park
 bglink: ""
+ordering: 5
 ---
 In 1828, a tariff was introduced by President John Quincy Adams to protect the manufacturing of American goods and weaken the colonial relationship that America had with Europe. However, the tariff rates were 49% - an all-time high. It was aptly named the Tariff of Abomination. Opinions on the tariff were heavily divided, especially by geographical region. 
 Northern manufacturers who had to compete with European imported goods were benefited by the tariff, but Southern plantation farmers, who were largely reliant on European trade to finance their farming, were not. Southerners such as Senator John C. Calhoun became a strong proponent of nullification, or the right for states to decide the constitutionality of protective tariffs and reject federal laws in their own borders, whereas Northerners, such as Senator Daniel Webster, believed federal courts were appropriate for deciding the constitutionality of legislation. 
