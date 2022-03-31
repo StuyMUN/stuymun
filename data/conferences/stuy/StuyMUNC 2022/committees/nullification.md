@@ -2,7 +2,7 @@
 title: "Historical Committee: US Senate 1832 Nullification Crisis"
 chair: Aaron Hui
 codirector: Andrew Park
-bglink: "https://www.stuymun.org/docs/Guides/nullcrisisbg"
+bglink: "https://www.stuymun.org/docs/Guides/nullcrisisbg.pdf"
 ordering: 5
 ---
 In 1828, a tariff was introduced by President John Quincy Adams to protect the manufacturing of American goods and weaken the colonial relationship that America had with Europe. However, the tariff rates were 49% - an all-time high. It was aptly named the Tariff of Abomination. Opinions on the tariff were heavily divided, especially by geographical region.
