@@ -15,9 +15,9 @@ export default function HomePage({ posts, conferences, upcoming }) {
                     <h1 className="countdown-title">{upcoming[0]}</h1>
                     <Countdown date={upcoming[1].details.date} />
                     <Link href={`/conference/${upcoming[0]}`}><button className="btn">Learn More</button></Link>
-                    <br>
+                    <br/>
                     <Link href={`https://forms.gle/DEwEc24FqHegMy329`}><button className="btn">Sign Up</button></Link>
-                    <br>
+                    <br/>
                     <Link href={`https://forms.gle/YxB4vNgEF3hFrWo1A`}><button className="btn">Sign Up (Single Del)</button></Link>
                 </Pill>
             </div>
