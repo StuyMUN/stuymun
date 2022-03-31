@@ -2,7 +2,7 @@
 title: "Gossip Girl"
 chair: Maya Dunayer
 codirector: Charlize Trostinsky and Kyle Hon Chan
-bglink: "https://www.stuymun.org/docs/Guides/gossipGirl.pdf"
+bglink: "https://www.stuymun.org/public/docs/Guides/gossipGirl.pdf"
 ordering: 9
 ---
 Spotted: Some of Constance Billard-St. Jude’s best and brightest students learning that nothing stays hidden for long.
