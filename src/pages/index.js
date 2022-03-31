@@ -18,7 +18,7 @@ export default function HomePage({ posts, conferences, upcoming }) {
                     <br/>
                     <Link href={`https://forms.gle/DEwEc24FqHegMy329`}><button className="btn">Sign Up</button></Link>
                     <br/>
-                    <Link href={`https://forms.gle/YxB4vNgEF3hFrWo1A`}><button className="btn">Sign Up (Single Del)</button></Link>
+                    <Link href={`https://forms.gle/YxB4vNgEF3hFrWo1A`}><button className="btn">Sign Up (Single Delegates)</button></Link>
                 </Pill>
             </div>
         </header>}
