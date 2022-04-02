@@ -10,7 +10,7 @@ export default function CommitteeInfo({ committee }) {
 
     function getBGLink(bglink) {
         if (isHttpLink(bglink)) {
-            return <Link href={bglink}>Background Guide</Link>
+            return <Link href={bglink} target="_blank">Background Guide</Link>
         } else {
             return <p>Background Guide coming soon!</p>
         }
