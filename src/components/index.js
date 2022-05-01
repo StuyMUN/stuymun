@@ -1,6 +1,6 @@
 export { default as Layout } from './Layout';
 export { default as Navbar } from './Navbar';
-
+export { default as Schedule } from './Schedule';
 export { default as Link } from './Link';
 export { default as NextLink } from 'next/link';
 

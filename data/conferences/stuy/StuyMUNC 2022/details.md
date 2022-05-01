@@ -18,3 +18,18 @@ We are proud to invite you to our 18th annual conference and hope that you will 
 [Link to register for single delegates](https://forms.gle/YxB4vNgEF3hFrWo1A)
 
 ---
+
+### Schedule
+
+**8:00 AM - 8:45 AM** - Check-in
+
+**9:15 AM - 9:50 AM** - Opening Ceremonies
+
+**10:00 AM - 12:30 PM** - COMMITTEE SESSION I
+
+**12:30 PM - 1:45 PM** - Lunch Break Outdoors
+
+**1:45 PM - 5:15 PM** - COMMITTEE SESSION II
+
+**5:25 PM - 6:00 PM** - Closing Ceremonies
+
