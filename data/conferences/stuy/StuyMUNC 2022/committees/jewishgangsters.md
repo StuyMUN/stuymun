@@ -1,7 +1,7 @@
 ---
 title: "Jewish Gangsters"
 chair: Sophia Yuditsky
-codirector: Lina Khamze and Andrey Sokolov
+codirector: Charlize Trostinsky and Andrey Sokolov
 bglink: "https://www.stuymun.org/docs/Guides/jewish_gangsters.pdf"
 ordering: 8
 ---
