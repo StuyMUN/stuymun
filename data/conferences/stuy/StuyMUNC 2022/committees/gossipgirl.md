@@ -1,7 +1,7 @@
 ---
 title: "Gossip Girl"
 chair: Maya Dunayer
-codirector: Charlize Trostinsky and Kyle Hon Chan
+codirector: Lina Khamze and Kyle Hon Chan
 bglink: "https://www.stuymun.org/docs/Guides/gossip_girl.pdf"
 ordering: 9
 ---
