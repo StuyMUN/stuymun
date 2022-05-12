@@ -8,6 +8,8 @@ title: Welcome Incoming Freshmen!
 
 ---
 
+![StuyMUNC]("https://www.stuymun.org/public/img/StuyMUN2022.JPG")
+
 Ciao Everyone!
 
 Come learn about what Model U.N. has to offer and what makes it a unique opportunity! We meet every Monday and Thursday at room 335 at 3:35. Pop by our interest meeting later in the year or join our [signup](https://docs.google.com/forms/d/e/1FAIpQLSfQoSPUPf_JA6-6WPtapy4-z4lYwM4fAu3PcPXtFJ8CQAWbWQ/viewform)! You can also email us at mun@stuyclubpub.org.
