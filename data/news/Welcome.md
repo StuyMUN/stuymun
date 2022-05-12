@@ -8,7 +8,7 @@ title: Welcome Incoming Freshmen!
 
 ---
 
-![StuyMUNC](/img/StuyMUN2022.JPG)
+![StuyMUNC](/img/StuyMUN2022.JPG = 200 x 100)
 
 Ciao Everyone!
 
