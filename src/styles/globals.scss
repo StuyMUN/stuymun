@@ -26,7 +26,7 @@
 }
 
 .__page-navigator {
-    width: 40%; 
+    width: 40%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -50,7 +50,7 @@ div#nav {
 	-webkit-transition: top 0.2s;
 	transition: top 0.2s;
 	position: fixed;
-	height: 84.63px; 
+	height: 84.63px;
 	width: 100%;
 	z-index: 2;
 	background: var(--bg-color);
@@ -76,6 +76,7 @@ nav {
 	.link-txt {
 		padding-top: 1.7rem;
 		padding-inline: 1.4rem;
+		text-decoration: underline;
 	}
 	.link-txt:hover {
 		-webkit-transition: color 0.2s;
@@ -227,7 +228,7 @@ h3 {
 	}
 	.upcoming {
 		h2#upcoming-h2 {
-			top: 0 !important; 
+			top: 0 !important;
 			left: -30px !important;
 			font-size: 3em !important;
 		}
@@ -427,9 +428,9 @@ section {
 	position: relative;
 	top: 0px;
 	right: 0px;
-	
+
 	z-index: 1;
-	
+
 	-webkit-user-select: none;
 	user-select: none;
 	}
@@ -437,7 +438,7 @@ section {
 	{
 	text-decoration: none;
 	color: var(--link-color);
-	
+
 	transition: color 0.3s ease;
 	}
 	#menuToggle a:hover
@@ -453,12 +454,12 @@ section {
 	position: absolute;
 	top: -7px;
 	left: -5px;
-	
+
 	cursor: pointer;
-	
+
 	opacity: 0;
 	z-index: 2;
-	
+
 	-webkit-touch-callout: none;
 	}
 	#menuToggle span
@@ -468,14 +469,14 @@ section {
 	height: 4px;
 	margin-bottom: 5px;
 	position: relative;
-	
+
 	background: #f3f3f3;
 	border-radius: 3px;
-	
+
 	z-index: 1;
-	
+
 	transform-origin: 4px 0px;
-	
+
 	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
 				background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
 				opacity 0.55s ease;
@@ -513,14 +514,14 @@ section {
 	width: 100vw;
 	height: 100vh;
 	padding: 50px;
-	
+
 	background: #ededed;
 	list-style-type: none;
 	-webkit-font-smoothing: antialiased;
-	
+
 	transform-origin: 0% 0%;
 	transform: translate(-100%, 0);
-	
+
 	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 	}
 	#menu li
@@ -644,7 +645,7 @@ footer {
 	position: absolute;
 	margin-top: 100px;
 	bottom: 0;
-	width: 100%; 
+	width: 100%;
 }
 .vertline {
 	display: inline;
