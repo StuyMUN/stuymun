@@ -8,7 +8,7 @@ title: Welcome Incoming Freshmen!
 
 ---
 
-<img src="/img/StuyMUN2022.JPG" alt="StuyMUNC 2022!" style="width:200%;"/>
+<img src="/img/StuyMUN2022.JPG" alt="StuyMUNC 2022!" style="width:100%;"/>
 
 Ciao Everyone!
 
