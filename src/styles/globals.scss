@@ -543,6 +543,26 @@ section {
 }
 
 // Homepage Styling
+
+//new
+//maximizes image size on medium-sized screens
+.welcomeImg {
+	width: 107%;
+	// padding-right: 2rem;
+	margin-left: -3vw;
+	padding: 0;
+	border-radius: 5%;
+}
+
+//maximizes image on mobile screens
+@media (max-width: 500px) {
+	.welcomeImg {
+		width: 125%;
+		margin-left: -9vw;
+	}
+}
+//end new
+
 .content-split {
 	section:nth-child(1) {
 		flex: 2;
@@ -591,6 +611,14 @@ section {
 	}
 }
 @media (min-width: 1270px) {
+	//new
+	//centers image on fullscreen view
+	.welcomeImg {
+		width: 100%;
+		margin-left: -17px;
+	}
+	//end new
+
 	.content-split {
 		flex-direction: row;
 		> * {
