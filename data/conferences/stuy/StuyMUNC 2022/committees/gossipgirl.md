@@ -2,7 +2,7 @@
 title: "Gossip Girl"
 chair: Maya Dunayer
 codirector: Lina Khamze and Kyle Hon Chan
-bglink: "https://www.stuymun.org/docs/Guides/gossip_girl.pdf"
+bglink: "https://www.stuymun.org/docs/2021/stuy/gossip_girl.pdf"
 ordering: 9
 ---
 Spotted: Some of Constance Billard-St. Jude’s best and brightest students learning that nothing stays hidden for long.
