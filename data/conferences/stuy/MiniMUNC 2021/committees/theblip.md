@@ -2,7 +2,7 @@
 title: "MCU: The Blip"
 chair: Olivia Tedesco
 codirector: James Kang and Andrey Sokolov
-bglink: "https://www.stuymun.org/docs/mcu.pdf"
+bglink: "https://www.stuymun.org/docs/2021/mini/mcu.pdf"
 
 ordering: 6
 ---

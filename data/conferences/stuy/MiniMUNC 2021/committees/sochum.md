@@ -2,7 +2,7 @@
 title: "SOCHUM: Government Right to Moderate Conflict"
 chair: Naya Mukul
 codirector: Cameron Kluger
-bglink: "https://www.stuymun.org/docs/sochum.pdf"
+bglink: "https://www.stuymun.org/docs/2021/mini/sochum.pdf"
 
 ordering: 2
 ---
