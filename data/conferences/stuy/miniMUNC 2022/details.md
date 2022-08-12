@@ -5,8 +5,8 @@ date:
     day: 22
 
 ---
-Stuyvesant Model UN is hosting a free, introductory MUN conference on Saturday, October 22nd, and y'all are invited! 
-This conference is geared towards **novices** and will give you a glimpse into why we are one of the biggest and most active clubs at Stuyvesant. It's a lot of fun, and you'll be able to meet new people, talk, and learn more about MUN by going!! There is no experience or knowledge required, and we'd really appreciate it if you anyone who could signed up!
+On October 22nd, Stuyvesant Model UN will be hosting a free, introductory MUN conference for all novices! 
+This conference is designed as a practice conference for **novices** and will give you a glimpse into politics, history, and solving problems on the fly. The committees were designed to be engaging, with novices being able to gain practice in public speaking, collaboration, and attention to details. There is absolutely no experience or knowledge required, and we would greatly appreciate you signing up!
 
-The conference will take place from 9am - 5pm, more detailed schedule will be sent out later.
+The conference will take place from 9am - 5pm, with more detailed schedule sent out later. Please make sure to respond to our email if you are interested in attending.
 ___
