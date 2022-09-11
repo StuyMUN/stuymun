@@ -2,7 +2,7 @@
 title: "The Death of Alexander the Great"
 chair: Madhavi Tiruchelvam
 codirector: Ty Anant and Seth Fenton
-bglink: ""
+bglink: "https://www.stuymun.org/docs/2022/mini/alexander.pdf"
 
 ordering: 5
 ---

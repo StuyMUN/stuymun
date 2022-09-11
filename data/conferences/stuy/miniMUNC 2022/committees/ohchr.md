@@ -2,7 +2,7 @@
 title: "OHCHR: Validity of the Death Penalty"
 chair: Aaron Hui
 codirector: Arshia Mazumder and Simone Raleigh
-bglink: ""
+bglink: "https://www.stuymun.org/docs/2022/mini/ohchr.pdf"
 
 ordering: 1
 ---

@@ -2,7 +2,7 @@
 title: "Frostpunk"
 chair: Ethan Wong
 codirector: Shreya Das and Alexander Panas
-bglink: ""
+bglink: "https://www.stuymun.org/docs/2022/mini/frostpunk.pdf"
 
 ordering: 6
 ---

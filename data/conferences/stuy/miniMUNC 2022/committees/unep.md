@@ -2,7 +2,7 @@
 title: "UNEP: Bringing Countries to Zero Waste"
 chair: Jerry Yang
 codirector: Celise Lin
-bglink: ""
+bglink: "https://www.stuymun.org/docs/2022/mini/unep.pdf"
 
 ordering: 2
 ---

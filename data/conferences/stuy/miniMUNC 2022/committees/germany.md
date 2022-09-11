@@ -2,7 +2,7 @@
 title: "The Reunification of Germany (1990)"
 chair: Sophia Yuditsky
 codirector: Andrew Park
-bglink: ""
+bglink: "https://www.stuymun.org/docs/2022/mini/germany.pdf"
 
 ordering: 4
 ---
