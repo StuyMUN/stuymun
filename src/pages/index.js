@@ -16,7 +16,7 @@ export default function HomePage({ posts, conferences, upcoming }) {
                     <Countdown date={upcoming[1].details.date} />
                     <Link href={`/conference/${upcoming[0]}`}><button className="btn">Learn More</button></Link>
                     <br/>
-                    <Link href={`https://forms.gle/DEwEc24FqHegMy329`}><button className="btn">Sign Up</button></Link>
+                    <Link href={`https://forms.gle/F3AGpGY7xQ1jVezF9`}><button className="btn">Sign Up</button></Link>
                     <br/>
                     <Schedule/>
                 </Pill>
