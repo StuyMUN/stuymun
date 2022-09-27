@@ -18,7 +18,7 @@ export default function HomePage({ posts, conferences, upcoming }) {
                     <br/>
                     <Link href={`https://forms.gle/F3AGpGY7xQ1jVezF9`}><button className="btn">Sign Up (Delegation)</button></Link>
                     <br/>
-                    <Link href={`https://bit.ly/minimunc2022spots`}><button className="btn">Sign Up (Delegate)</button></Link>
+                    <Link href={`https://forms.gle/sfUP4VvruWQXExsq5`}><button className="btn">Sign Up (Delegate)</button></Link>
                     <br/>
                     <Schedule/>
                 </Pill>
